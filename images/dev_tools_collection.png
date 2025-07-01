@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#2d3436"/>
+  
+  <!-- Terminal Window -->
+  <rect x="50" y="50" width="700" height="500" rx="10" fill="#1e272e"/>
+  
+  <!-- Terminal Header -->
+  <rect x="50" y="50" width="700" height="30" rx="10" fill="#485460"/>
+  <circle cx="70" cy="65" r="7" fill="#ff5e57"/>
+  <circle cx="90" cy="65" r="7" fill="#febc2e"/>
+  <circle cx="110" cy="65" r="7" fill="#28c941"/>
+  <text x="375" y="72" font-family="monospace" font-size="14" fill="white" text-anchor="middle">Developer Tools Collection</text>
+  
+  <!-- Terminal Content -->
+  <g font-family="monospace" font-size="14" fill="#ecf0f1">
+    <!-- Command Prompt 1 -->
+    <text x="70" y="110">user@linux:~$ <tspan fill="#26de81">./system_monitor.sh</tspan></text>
+    
+    <!-- Output 1 -->
+    <text x="70" y="130">System Monitor v1.2.0</text>
+    <text x="70" y="150">CPU: 23% | Memory: 3.2GB/16GB | Disk: 120GB/500GB</text>
+    <text x="70" y="170">Network: ↑ 1.2MB/s ↓ 5.6MB/s</text>
+    <text x="70" y="190">Active Processes: 142</text>
+    
+    <!-- Command Prompt 2 -->
+    <text x="70" y="230">user@linux:~$ <tspan fill="#26de81">python3 network_scan.py</tspan></text>
+    
+    <!-- Output 2 -->
+    <text x="70" y="250">Network Scanner v2.1</text>
+    <text x="70" y="270">Scanning local network 192.168.1.0/24...</text>
+    <text x="70" y="290">Found 8 active devices:</text>
+    <text x="70" y="310">192.168.1.1 - Router (00:11:22:33:44:55)</text>
+    <text x="70" y="330">192.168.1.5 - Desktop (AA:BB:CC:DD:EE:FF)</text>
+    <text x="70" y="350">192.168.1.10 - Laptop (11:22:33:44:55:66)</text>
+    <text x="70" y="370">...</text>
+    
+    <!-- Command Prompt 3 -->
+    <text x="70" y="410">user@linux:~$ <tspan fill="#26de81">./backup_tool.sh /home/user/projects</tspan></text>
+    
+    <!-- Output 3 -->
+    <text x="70" y="430">Backup Tool v1.5</text>
+    <text x="70" y="450">Creating backup of /home/user/projects...</text>
+    <text x="70" y="470">[====================] 100% Complete</text>
+    <text x="70" y="490">Backup saved to /backups/projects_2023-07-15.tar.gz</text>
+    
+    <!-- Command Prompt 4 -->
+    <text x="70" y="530">user@linux:~$ _</text>
+  </g>
+  
+  <!-- Tool Icons -->
+  <g transform="translate(650, 120) scale(0.8)">
+    <!-- Terminal Icon -->
+    <rect x="0" y="0" width="40" height="40" rx="5" fill="#0abde3"/>
+    <text x="20" y="28" font-family="monospace" font-size="24" fill="white" text-anchor="middle">></text>
+  </g>
+  
+  <g transform="translate(650, 180) scale(0.8)">
+    <!-- Network Icon -->
+    <rect x="0" y="0" width="40" height="40" rx="5" fill="#ff9f43"/>
+    <path d="M10,20 L30,20 M20,10 L20,30 M10,10 L30,30 M10,30 L30,10" stroke="white" stroke-width="2" fill="none"/>
+  </g>
+  
+  <g transform="translate(650, 240) scale(0.8)">
+    <!-- Backup Icon -->
+    <rect x="0" y="0" width="40" height="40" rx="5" fill="#ee5253"/>
+    <path d="M15,10 L25,10 L30,15 L30,30 L10,30 L10,15 Z" stroke="white" stroke-width="2" fill="none"/>
+    <path d="M15,10 L15,15 L25,15 L25,10" stroke="white" stroke-width="2" fill="none"/>
+    <path d="M20,18 L20,26" stroke="white" stroke-width="2" fill="none"/>
+    <path d="M16,22 L24,22" stroke="white" stroke-width="2" fill="none"/>
+  </g>
+  
+  <g transform="translate(650, 300) scale(0.8)">
+    <!-- Settings Icon -->
+    <rect x="0" y="0" width="40" height="40" rx="5" fill="#1dd1a1"/>
+    <circle cx="20" cy="20" r="10" stroke="white" stroke-width="2" fill="none"/>
+    <path d="M20,5 L20,10 M20,30 L20,35 M5,20 L10,20 M30,20 L35,20 M8,8 L12,12 M28,28 L32,32 M8,32 L12,28 M28,12 L32,8" stroke="white" stroke-width="2"/>
+  </g>
+</svg>
