@@ -235,6 +235,11 @@ section {
 
 .logo {
     cursor: pointer;
+    /* Slightly larger logo for better visibility */
+    font-size: 1.15rem; /* small increase */
+    font-weight: 700;
+    padding: 0.25rem 0.5rem; /* slightly larger hit area */
+    border-radius: var(--radius-sm);
 }
 
 .nav-links ul {
