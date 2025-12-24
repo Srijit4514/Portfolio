@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started with Data Visualization - Srijit Roy</title>
+    <link rel="icon" href="/favicons/favicon-32x32.png" type="image/png">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo" onclick="window.location.href='../../index.html'" onkeydown="if(event.key === 'Enter'){ window.location.href='../../index.html'; }" role="button" title="Go to homepage" tabindex="0"><strong>SR</strong></div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="../../index.html#home">Home</a></li>
+                <li><a href="../../index.html#about">About</a></li>
+                <li><a href="../../index.html#skills">Skills</a></li>
+                <li><a href="../../index.html#projects">Projects</a></li>
+                <li><a href="../../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+
+    <!-- Article Content -->
+    <article class="blog-post">
+        <div class="container blog-container">
+            <!-- Breadcrumb -->
+            <div class="breadcrumb">
+                <a href="../../index.html"><i class="fas fa-home"></i> Home</a>
+                <span class="separator">/</span>
+                <a href="../data-science.html">Data Science</a>
+                <span class="separator">/</span>
+                <span>Getting Started with Data Visualization</span>
+            </div>
+
+            <!-- Article Header -->
+            <header class="post-header">
+                <h1 class="post-title">Getting Started with Data Visualization</h1>
+                <div class="post-meta">
+                    <span class="post-date">
+                        <i class="far fa-calendar"></i>
+                        December 28, 2024
+                    </span>
+                    <span class="post-read-time">
+                        <i class="far fa-clock"></i>
+                        8 min read
+                    </span>
+                    <span class="post-category">
+                        <i class="fas fa-tag"></i>
+                        Data Science
+                    </span>
+                </div>
+            </header>
+
+            <!-- Article Body -->
+            <div class="post-content">
+                <p class="lead">Data visualization is how you turn raw numbers into insight. Clear visuals make it easier for teams, clients, and stakeholders to spot patterns, act quickly, and remember the story your data tells.</p>
+
+                <h2>What is Data Visualization?</h2>
+                <p>It is the practice of mapping data to visual encodings—position, color, size, and shape—so people can understand trends, comparisons, and outliers faster than by reading tables alone.</p>
+
+                <h3>Pick the Right Chart</h3>
+                <ul>
+                    <li><strong>Line:</strong> Trends over time or ordered sequences.</li>
+                    <li><strong>Bar:</strong> Compare categories or rank items side-by-side.</li>
+                    <li><strong>Scatter:</strong> Relationship between two numeric variables; great for spotting clusters and outliers.</li>
+                    <li><strong>Stacked/Area:</strong> Show parts of a whole over time, but beware of clutter.</li>
+                    <li><strong>Maps:</strong> Geographic patterns; use sparingly and only when location matters.</li>
+                </ul>
+
+                <h2>Design Principles that Matter</h2>
+                <ol>
+                    <li><strong>Clarity first:</strong> Remove chart junk—heavy borders, shadows, and unnecessary gradients.</li>
+                    <li><strong>Color with purpose:</strong> Use a restrained palette; reserve accent colors for the key series.</li>
+                    <li><strong>Consistent scales:</strong> Start axes at zero for bars; label units; avoid mixing scale types without clear cues.</li>
+                    <li><strong>Accessibility:</strong> Use colorblind-friendly palettes and sufficient contrast; never rely on color alone—add labels or patterns.</li>
+                    <li><strong>Context:</strong> Titles, subtitles, and annotations explain the “why” so readers don’t guess.</li>
+                </ol>
+
+                <h2>Essential Python Stack</h2>
+                <p>These libraries cover quick exploration to polished, interactive visuals:</p>
+
+                <div class="code-block">
+                    <pre><code># Core Python visualization stack
+import pandas as pd
+import matplotlib.pyplot as plt   # Versatile, customizable
+import seaborn as sns             # Beautiful statistical defaults
+import plotly.express as px       # Interactive charts for the web</code></pre>
+                </div>
+
+                <h3>Example: From CSV to Insight</h3>
+                <p>Load a dataset, clean it, and produce a labeled chart that highlights the main story.</p>
+
+                <div class="code-block">
+                    <pre><code>import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+sns.set_theme(style="whitegrid")
+
+# Load data
+sales = pd.read_csv("sales_by_region.csv")
+
+# Summarize totals
+summary = (
+    sales.groupby("region")["revenue"]
+    .sum()
+    .reset_index()
+    .sort_values("revenue", ascending=False)
+)
+
+# Plot
+plt.figure(figsize=(8, 5))
+ax = sns.barplot(data=summary, x="revenue", y="region", palette="crest")
+ax.set_title("Revenue by Region (2024)")
+ax.set_xlabel("Revenue (USD)")
+ax.set_ylabel("")
+ax.bar_label(ax.containers[0], fmt="$%.0f")
+plt.tight_layout()
+plt.show()</code></pre>
+                </div>
+
+                <h2>Quick Wins for Beginners</h2>
+                <ul>
+                    <li>Start with one clear question per chart; remove elements that don’t answer it.</li>
+                    <li>Use small multiples instead of overloaded legends when comparing groups.</li>
+                    <li>Annotate the single most important point so the takeaway is explicit.</li>
+                    <li>Test charts in grayscale to ensure they work for everyone.</li>
+                    <li>Prefer tidy data (columns = variables, rows = observations) to simplify plotting.</li>
+                </ul>
+
+                <h2>Next Steps</h2>
+                <ul>
+                    <li>Redo an existing dashboard with cleaner encodings and fewer colors.</li>
+                    <li>Build an interactive Plotly or Altair chart and embed it in a notebook or web page.</li>
+                    <li>Study well-designed examples (FT Visual Vocabulary, Data Viz Project) to expand your chart toolkit.</li>
+                    <li>Add lightweight user testing: ask a colleague to describe the story they see in 10 seconds.</li>
+                </ul>
+
+                <h2>Conclusion</h2>
+                <p>Good visualization is about intent: choose the right chart, remove distractions, and highlight what matters. With a thoughtful workflow and a few reliable tools, your data will speak clearly.</p>
+
+                <div class="post-tags">
+                    <span class="tag">Data Visualization</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Storytelling</span>
+                    <span class="tag">Best Practices</span>
+                </div>
+            </div>
+
+            <!-- Post Navigation -->
+            <div class="post-navigation">
+                <a href="../data-science.html" class="btn secondary-btn">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Data Science
+                </a>
+            </div>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">SR</div>
+                <p>© 2025 Srijit Roy.</p>
+                <div class="footer-social">
+                    <a href="https://github.com/Srijit4514" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/srijit-roy-377077282/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/darks04yt/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/Srijit786" target="_blank"><i class="fab fa-x"></i></a>
+                    <a href="https://discord.com/users/963409962959245362" target="_blank"><i class="fab fa-discord"></i></a>
+                </div>
+                <div class="terminal-quote">
+                    <span>Built with <i class="fas fa-laptop-code"></i> and <i class="fas fa-coffee"></i> by Srijit Roy</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="../../script.js"></script>
+</body>
+</html>

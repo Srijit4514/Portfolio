@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mastering the Linux Terminal - Srijit Roy</title>
+    <link rel="icon" href="/favicons/favicon-32x32.png" type="image/png">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo" onclick="window.location.href='../../index.html'" onkeydown="if(event.key === 'Enter'){ window.location.href='../../index.html'; }" role="button" title="Go to homepage" tabindex="0"><strong>SR</strong></div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="../../index.html#home">Home</a></li>
+                <li><a href="../../index.html#about">About</a></li>
+                <li><a href="../../index.html#skills">Skills</a></li>
+                <li><a href="../../index.html#projects">Projects</a></li>
+                <li><a href="../../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+
+    <!-- Article Content -->
+    <article class="blog-post">
+        <div class="container blog-container">
+            <!-- Breadcrumb -->
+            <div class="breadcrumb">
+                <a href="../../index.html"><i class="fas fa-home"></i> Home</a>
+                <span class="separator">/</span>
+                <a href="../linux.html">Linux</a>
+                <span class="separator">/</span>
+                <span>Let's talk about Linux OS</span>
+            </div>
+
+            <!-- Article Header -->
+            <header class="post-header">
+                <h1 class="post-title">Let's talk about Linux OS</h1>
+                <div class="post-meta">
+                    <span class="post-date">
+                        <i class="far fa-calendar"></i>
+                        January 18, 2025
+                    </span>
+                    <span class="post-read-time">
+                        <i class="far fa-clock"></i>
+                        10 min read
+                    </span>
+                    <span class="post-category">
+                        <i class="fas fa-tag"></i>
+                        Linux
+                    </span>
+                </div>
+            </header>
+
+            <!-- Article Body -->
+            <div class="post-content">
+                <p class="lead">The Linux terminal is one of the most powerful tools at your disposal. Whether you're managing servers, developing software, or just navigating your system, terminal proficiency is essential for any Linux user.</p>
+
+                <h2>Why Master the Terminal?</h2>
+                <p>The command line offers several advantages over graphical interfaces:</p>
+                <ul>
+                    <li><strong>Speed:</strong> Commands execute faster than navigating through GUI menus</li>
+                    <li><strong>Automation:</strong> Scripts can automate repetitive tasks</li>
+                    <li><strong>Remote Access:</strong> Manage servers efficiently via SSH</li>
+                    <li><strong>Power:</strong> Access advanced features not available in GUI</li>
+                    <li><strong>Resource Efficiency:</strong> Terminals use minimal system resources</li>
+                </ul>
+
+                <h2>Essential Commands Every User Should Know</h2>
+
+                <h3>File System Navigation</h3>
+                <div class="code-block">
+                    <pre><code># Change directory
+cd /path/to/directory
+cd ~  # Go to home directory
+cd -  # Go to previous directory
+
+# List files and directories
+ls -la  # Detailed list with hidden files
+ls -lh  # Human-readable file sizes
+
+# Present working directory
+pwd
+
+# Create directory
+mkdir -p parent/child/grandchild  # Create nested directories</code></pre>
+                </div>
+
+                <h3>File Operations</h3>
+                <div class="code-block">
+                    <pre><code># Copy files
+cp source.txt destination.txt
+cp -r source_dir/ dest_dir/  # Copy directories recursively
+
+# Move/rename files
+mv oldname.txt newname.txt
+mv file.txt /new/location/
+
+# Remove files
+rm file.txt
+rm -rf directory/  # Remove directory and contents (use with caution!)
+
+# View file contents
+cat file.txt      # Display entire file
+less file.txt     # Paginated view
+head -n 20 file.txt  # First 20 lines
+tail -f logfile.log  # Follow file updates in real-time</code></pre>
+                </div>
+
+                <h3>System Information</h3>
+                <div class="code-block">
+                    <pre><code># Disk usage
+df -h          # File system disk space
+du -sh *       # Directory sizes
+
+# System resources
+top            # Interactive process viewer
+htop           # Enhanced process viewer (if installed)
+free -h        # Memory usage
+
+# System information
+uname -a       # Kernel information
+lsb_release -a # Distribution information
+uptime         # System uptime</code></pre>
+                </div>
+
+                <h2>Advanced Terminal Techniques</h2>
+
+                <h3>Piping and Redirection</h3>
+                <p>Combine commands to create powerful workflows:</p>
+                <div class="code-block">
+                    <pre><code># Pipe output from one command to another
+cat file.txt | grep "search term" | wc -l
+
+# Redirect output to file
+ls -la > file_list.txt        # Overwrite
+echo "new line" >> file.txt   # Append
+
+# Redirect errors
+command 2> error.log
+command &> all_output.log     # Both stdout and stderr</code></pre>
+                </div>
+
+                <h3>Finding Files</h3>
+                <div class="code-block">
+                    <pre><code># Find files by name
+find /path -name "*.txt"
+find . -type f -name "config*"
+
+# Find files by size
+find . -size +100M
+
+# Find and execute command
+find . -name "*.log" -exec rm {} \;
+
+# Use locate (faster, uses database)
+locate filename
+sudo updatedb  # Update locate database</code></pre>
+                </div>
+
+                <h3>Text Processing with grep, sed, and awk</h3>
+                <div class="code-block">
+                    <pre><code># Search in files
+grep -r "search term" /path/  # Recursive search
+grep -i "case insensitive" file.txt
+grep -v "exclude this" file.txt  # Invert match
+
+# Stream editor (sed)
+sed 's/old/new/g' file.txt  # Replace all occurrences
+sed -n '10,20p' file.txt    # Print lines 10-20
+
+# Text processing (awk)
+awk '{print $1, $3}' file.txt  # Print columns 1 and 3
+awk '/pattern/ {print $0}' file.txt  # Print lines matching pattern</code></pre>
+                </div>
+
+                <h2>Terminal Productivity Tips</h2>
+
+                <h3>Keyboard Shortcuts</h3>
+                <ul>
+                    <li><code>Ctrl + A</code> - Move to beginning of line</li>
+                    <li><code>Ctrl + E</code> - Move to end of line</li>
+                    <li><code>Ctrl + R</code> - Reverse search command history</li>
+                    <li><code>Ctrl + L</code> - Clear screen</li>
+                    <li><code>Ctrl + C</code> - Terminate current process</li>
+                    <li><code>Ctrl + Z</code> - Suspend current process</li>
+                    <li><code>Tab</code> - Auto-complete commands and paths</li>
+                </ul>
+
+                <h3>Command History</h3>
+                <div class="code-block">
+                    <pre><code># View command history
+history
+
+# Execute previous command
+!!
+
+# Execute command by number
+!123
+
+# Search history
+Ctrl + R, then type search term</code></pre>
+                </div>
+
+                <h3>Aliases for Common Commands</h3>
+                <p>Add these to your ~/.bashrc or ~/.zshrc:</p>
+                <div class="code-block">
+                    <pre><code>alias ll='ls -lah'
+alias ..='cd ..'
+alias update='sudo pacman -Syu'  # For Arch Linux
+alias grep='grep --color=auto'
+alias df='df -h'
+alias du='du -h'</code></pre>
+                </div>
+
+                <h2>Package Management</h2>
+                <p>Different distributions use different package managers:</p>
+                <div class="code-block">
+                    <pre><code># Arch Linux (pacman)
+sudo pacman -S package_name      # Install
+sudo pacman -Syu                 # Update system
+sudo pacman -R package_name      # Remove
+
+# Ubuntu/Debian (apt)
+sudo apt update                  # Update package lists
+sudo apt install package_name    # Install
+sudo apt upgrade                 # Upgrade packages
+
+# Fedora (dnf)
+sudo dnf install package_name
+sudo dnf update</code></pre>
+                </div>
+
+                <h2>Conclusion</h2>
+                <p>Mastering the Linux terminal is a journey that takes time and practice. Start by incorporating these commands into your daily workflow, and gradually explore more advanced features. The investment will pay dividends in productivity and system understanding.</p>
+
+                <p>Remember: the terminal is your friend, not something to fear. With practice, you'll wonder how you ever managed without it!</p>
+
+                <div class="post-tags">
+                    <span class="tag">Linux</span>
+                    <span class="tag">Terminal</span>
+                    <span class="tag">Command Line</span>
+                    <span class="tag">Productivity</span>
+                </div>
+            </div>
+
+            <!-- Post Navigation -->
+            <div class="post-navigation">
+                <a href="../linux.html" class="btn secondary-btn">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Linux
+                </a>
+            </div>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">SR</div>
+                <p>© 2025 Srijit Roy.</p>
+                <div class="footer-social">
+                    <a href="https://github.com/Srijit4514" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/srijit-roy-377077282/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/darks04yt/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/Srijit786" target="_blank"><i class="fab fa-x"></i></a>
+                    <a href="https://discord.com/users/963409962959245362" target="_blank"><i class="fab fa-discord"></i></a>
+                </div>
+                <div class="terminal-quote">
+                    <span>Built with <i class="fas fa-laptop-code"></i> and <i class="fas fa-coffee"></i> by Srijit Roy</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="../../script.js"></script>
+</body>
+</html>

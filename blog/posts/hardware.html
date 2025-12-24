@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtualization with VMware - Srijit Roy</title>
+    <link rel="icon" href="/favicons/favicon-32x32.png" type="image/png">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo" onclick="window.location.href='../../index.html'" onkeydown="if(event.key === 'Enter'){ window.location.href='../../index.html'; }" role="button" title="Go to homepage" tabindex="0"><strong>SR</strong></div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="../../index.html#home">Home</a></li>
+                <li><a href="../../index.html#about">About</a></li>
+                <li><a href="../../index.html#skills">Skills</a></li>
+                <li><a href="../../index.html#projects">Projects</a></li>
+                <li><a href="../../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+
+    <!-- Article Content -->
+    <article class="blog-post">
+        <div class="container blog-container">
+            <!-- Breadcrumb -->
+            <div class="breadcrumb">
+                <a href="../../index.html"><i class="fas fa-home"></i> Home</a>
+                <span class="separator">/</span>
+                <a href="../hardware-networking.html">Hardware & Networking</a>
+                <span class="separator">/</span>
+                <span>Experience on Hardware</span>
+            </div>
+
+            <!-- Article Header -->
+            <header class="post-header">
+                <h1 class="post-title">Experience on Hardware</h1>
+                <div class="post-meta">
+                    <span class="post-date">
+                        <i class="far fa-calendar"></i>
+                        December 25, 2024
+                    </span>
+                    <span class="post-read-time">
+                        <i class="far fa-clock"></i>
+                        10 min read
+                    </span>
+                    <span class="post-category">
+                        <i class="fas fa-tag"></i>
+                        Hardware & Networking
+                    </span>
+                </div>
+            </header>
+
+            <!-- Article Body -->
+            <div class="post-content">
+                <p class="lead">Virtualization has revolutionized how we use computers. VMware Workstation allows you to run multiple operating systems simultaneously on a single machine, making it perfect for testing, development, and learning.</p>
+
+                <h2>What is Virtualization?</h2>
+                <p>Virtualization creates a software-based (virtual) representation of computer hardware. Instead of running one operating system directly on physical hardware, you can run multiple virtual machines (VMs), each with its own OS, on a single physical computer.</p>
+
+                <h3>Benefits of Virtualization</h3>
+                <ul>
+                    <li><strong>Isolation:</strong> Test software safely without affecting your main system</li>
+                    <li><strong>Cost Savings:</strong> Run multiple servers on one physical machine</li>
+                    <li><strong>Easy Backups:</strong> Snapshot VMs for instant recovery</li>
+                    <li><strong>Learning Platform:</strong> Experiment with different operating systems</li>
+                    <li><strong>Development:</strong> Test applications across multiple platforms</li>
+                </ul>
+
+                <h2>Getting Started with VMware Workstation</h2>
+
+                <h3>System Requirements</h3>
+                <p>Before installing VMware, ensure your system meets these requirements:</p>
+                <ul>
+                    <li>64-bit processor with virtualization extensions (Intel VT-x or AMD-V)</li>
+                    <li>Minimum 4GB RAM (8GB+ recommended)</li>
+                    <li>Sufficient disk space for VMs (50GB+ free recommended)</li>
+                    <li>Windows or Linux host operating system</li>
+                </ul>
+
+                <h3>Installing VMware Workstation</h3>
+                <ol>
+                    <li>Download VMware Workstation Pro or Player from the official website</li>
+                    <li>Run the installer and follow the setup wizard</li>
+                    <li>Enter your license key (Pro) or use the free Player version</li>
+                    <li>Restart your computer after installation</li>
+                </ol>
+
+                <h2>Creating Your First Virtual Machine</h2>
+
+                <h3>Step-by-Step VM Creation</h3>
+                <div class="code-block">
+                    <pre><code>1. Open VMware Workstation
+2. Click "Create a New Virtual Machine"
+3. Select "Typical" configuration
+4. Choose installation source:
+   - Install from ISO image
+   - Install later
+5. Select guest OS (e.g., Ubuntu 22.04)
+6. Name your VM and choose storage location
+7. Specify disk size (20GB minimum for Linux)
+8. Customize hardware if needed:
+   - Allocate RAM (2-4GB for basic systems)
+   - Assign CPU cores
+   - Configure network adapter
+9. Click "Finish" to create the VM</code></pre>
+                </div>
+
+                <h3>Recommended VM Settings</h3>
+                <p>For optimal performance, consider these settings:</p>
+                <ul>
+                    <li><strong>Memory:</strong> 2GB minimum, 4GB+ for modern OSs</li>
+                    <li><strong>Processors:</strong> 2 cores for most systems</li>
+                    <li><strong>Hard Disk:</strong> Allocate dynamically for space efficiency</li>
+                    <li><strong>Network:</strong> NAT for internet access, Bridged for network services</li>
+                </ul>
+
+                <h2>Essential VMware Features</h2>
+
+                <h3>Snapshots</h3>
+                <p>Snapshots capture your VM's state at a specific point in time:</p>
+                <div class="code-block">
+                    <pre><code>Creating a Snapshot:
+1. Select your VM
+2. VM Menu > Snapshot > Take Snapshot
+3. Name your snapshot descriptively
+4. Add optional description
+5. Click "Take Snapshot"
+
+Restoring from Snapshot:
+1. VM Menu > Snapshot > Snapshot Manager
+2. Select the snapshot
+3. Click "Go To" or "Restore"</code></pre>
+                </div>
+
+                <h3>Shared Folders</h3>
+                <p>Share files between host and guest systems:</p>
+                <div class="code-block">
+                    <pre><code>Setup Shared Folders:
+1. VM Menu > Settings
+2. Options tab > Shared Folders
+3. Click "Add" to create new shared folder
+4. Browse to host folder path
+5. Name the share
+6. Enable "Always enabled"
+7. Install VMware Tools in guest OS
+8. Access shared folder in guest system</code></pre>
+                </div>
+
+                <h3>Cloning VMs</h3>
+                <p>Create copies of existing VMs quickly:</p>
+                <ul>
+                    <li><strong>Full Clone:</strong> Complete independent copy</li>
+                    <li><strong>Linked Clone:</strong> Shares disk with parent VM, saves space</li>
+                </ul>
+
+                <h2>Network Configuration</h2>
+
+                <h3>Network Adapter Types</h3>
+                <ul>
+                    <li><strong>NAT:</strong> VM shares host's IP, good for internet access</li>
+                    <li><strong>Bridged:</strong> VM gets own IP on network, acts like physical machine</li>
+                    <li><strong>Host-Only:</strong> Private network between host and VMs</li>
+                    <li><strong>Custom:</strong> User-defined virtual networks</li>
+                </ul>
+
+                <h2>Performance Optimization Tips</h2>
+
+                <h3>Host System Optimization</h3>
+                <ul>
+                    <li>Close unnecessary applications before running VMs</li>
+                    <li>Store VMs on SSD for better performance</li>
+                    <li>Allocate RAM wisely - don't over-commit</li>
+                    <li>Enable hardware virtualization in BIOS</li>
+                </ul>
+
+                <h3>Guest System Optimization</h3>
+                <ul>
+                    <li>Always install VMware Tools for better performance</li>
+                    <li>Disable unnecessary services in guest OS</li>
+                    <li>Use paravirtualized drivers when available</li>
+                    <li>Defragment virtual disks periodically</li>
+                </ul>
+
+                <h2>Common Use Cases</h2>
+
+                <h3>Development and Testing</h3>
+                <p>Create isolated environments for:</p>
+                <ul>
+                    <li>Testing software across different OS versions</li>
+                    <li>Database server development</li>
+                    <li>Web application testing</li>
+                    <li>Security research and penetration testing</li>
+                </ul>
+
+                <h3>Learning and Certification</h3>
+                <ul>
+                    <li>Practice Linux system administration</li>
+                    <li>Set up Windows Server environments</li>
+                    <li>Create network labs for CCNA/CompTIA studies</li>
+                    <li>Experiment with different distributions</li>
+                </ul>
+
+                <h2>Troubleshooting Common Issues</h2>
+
+                <h3>VM Won't Start</h3>
+                <ul>
+                    <li>Check if virtualization is enabled in BIOS</li>
+                    <li>Verify sufficient RAM and disk space</li>
+                    <li>Disable Hyper-V if on Windows</li>
+                    <li>Check for VMware service status</li>
+                </ul>
+
+                <h3>Poor Performance</h3>
+                <ul>
+                    <li>Reduce VM memory allocation</li>
+                    <li>Decrease number of running VMs</li>
+                    <li>Install VMware Tools</li>
+                    <li>Disable 3D acceleration if not needed</li>
+                </ul>
+
+                <h2>Conclusion</h2>
+                <p>VMware Workstation is an incredibly powerful tool for anyone working with multiple operating systems. Whether you're a developer, IT professional, or enthusiast, mastering virtualization opens up endless possibilities for learning and experimentation without risk to your primary system.</p>
+
+                <p>Start simple with one VM, learn the basics, and gradually build more complex environments. Before you know it, you'll be running entire virtual networks!</p>
+
+                <div class="post-tags">
+                    <span class="tag">VMware</span>
+                    <span class="tag">Virtualization</span>
+                    <span class="tag">System Administration</span>
+                    <span class="tag">Networking</span>
+                </div>
+            </div>
+
+            <!-- Post Navigation -->
+            <div class="post-navigation">
+                <a href="../hardware-networking.html" class="btn secondary-btn">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Hardware & Networking
+                </a>
+            </div>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">SR</div>
+                <p>© 2025 Srijit Roy.</p>
+                <div class="footer-social">
+                    <a href="https://github.com/Srijit4514" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/srijit-roy-377077282/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/darks04yt/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/Srijit786" target="_blank"><i class="fab fa-x"></i></a>
+                    <a href="https://discord.com/users/963409962959245362" target="_blank"><i class="fab fa-discord"></i></a>
+                </div>
+                <div class="terminal-quote">
+                    <span>Built with <i class="fas fa-laptop-code"></i> and <i class="fas fa-coffee"></i> by Srijit Roy</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="../../script.js"></script>
+</body>
+</html>

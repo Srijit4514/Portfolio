@@ -12,16 +12,16 @@
     "topic": "data-science",
     "date": "2025-01-10",
     "summary": "Explore NumPy, Pandas, and Matplotlib - the essential toolkit for any data scientist.",
-    "url": "posts/python-data-libraries.html",
+    "url": "posts/python_with_libraries.html",
     "readTime": "6 min read"
   },
   {
-    "title": "Data Visualization Best Practices",
+    "title": "Getting Started with Data Visualization",
     "topic": "data-science",
     "date": "2024-12-28",
-    "summary": "Learn how to create meaningful and impactful data visualizations that tell a story.",
-    "url": "posts/data-visualization.html",
-    "readTime": "7 min read"
+    "summary": "Learn the essentials of charts, color, and storytelling to make your data memorable.",
+    "url": "posts/data_visualization.html",
+    "readTime": "8 min read"
   },
   {
     "title": "Mastering the Linux Terminal",
@@ -36,7 +36,7 @@
     "topic": "linux",
     "date": "2025-01-05",
     "summary": "My journey from Ubuntu to Arch Linux, and why the customization and control were worth it.",
-    "url": "posts/switched-to-arch.html",
+    "url": "posts/linux_os.html",
     "readTime": "5 min read"
   },
   {
@@ -44,7 +44,7 @@
     "topic": "linux",
     "date": "2024-12-20",
     "summary": "A step-by-step guide to setting up and configuring the i3 window manager for maximum efficiency.",
-    "url": "posts/i3wm-setup.html",
+    "url": "posts/linux_setup.html",
     "readTime": "12 min read"
   },
   {
@@ -56,11 +56,11 @@
     "readTime": "9 min read"
   },
   {
-    "title": "Modern JavaScript ES6+ Features",
+    "title": "Database Management Systems: An Overview",
     "topic": "technical-skills",
     "date": "2024-12-30",
     "summary": "Discover arrow functions, destructuring, async/await, and other powerful ES6+ features.",
-    "url": "posts/javascript-es6.html",
+    "url": "posts/dbms.html",
     "readTime": "8 min read"
   },
   {
@@ -68,7 +68,7 @@
     "topic": "technical-skills",
     "date": "2024-12-15",
     "summary": "Best practices for collaborative development using Git branching strategies and pull requests.",
-    "url": "posts/git-team-workflow.html",
+    "url": "posts/git_github.html",
     "readTime": "7 min read"
   },
   {
@@ -76,7 +76,7 @@
     "topic": "hardware-networking",
     "date": "2025-01-08",
     "summary": "Set up your own network lab for learning and experimentation with routers, switches, and servers.",
-    "url": "posts/home-network-lab.html",
+    "url": "posts/network.html",
     "readTime": "11 min read"
   },
   {
@@ -92,7 +92,7 @@
     "topic": "hardware-networking",
     "date": "2024-12-10",
     "summary": "Practical tips for diagnosing and fixing common PC hardware problems like a pro.",
-    "url": "posts/hardware-troubleshooting.html",
+    "url": "posts/hardware.html",
     "readTime": "6 min read"
   }
 ]
