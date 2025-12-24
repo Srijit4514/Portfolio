@@ -1,0 +1,98 @@
+[
+  {
+    "title": "Getting Started with Machine Learning",
+    "topic": "data-science",
+    "date": "2025-01-15",
+    "summary": "A comprehensive guide to understanding the fundamentals of machine learning and its real-world applications.",
+    "url": "posts/ml-getting-started.html",
+    "readTime": "8 min read"
+  },
+  {
+    "title": "Python for Data Analysis: Essential Libraries",
+    "topic": "data-science",
+    "date": "2025-01-10",
+    "summary": "Explore NumPy, Pandas, and Matplotlib - the essential toolkit for any data scientist.",
+    "url": "posts/python-data-libraries.html",
+    "readTime": "6 min read"
+  },
+  {
+    "title": "Data Visualization Best Practices",
+    "topic": "data-science",
+    "date": "2024-12-28",
+    "summary": "Learn how to create meaningful and impactful data visualizations that tell a story.",
+    "url": "posts/data-visualization.html",
+    "readTime": "7 min read"
+  },
+  {
+    "title": "Mastering the Linux Terminal",
+    "topic": "linux",
+    "date": "2025-01-18",
+    "summary": "Essential commands and techniques every Linux user should know to boost productivity.",
+    "url": "posts/linux-terminal-mastery.html",
+    "readTime": "10 min read"
+  },
+  {
+    "title": "Why I Switched to Arch Linux",
+    "topic": "linux",
+    "date": "2025-01-05",
+    "summary": "My journey from Ubuntu to Arch Linux, and why the customization and control were worth it.",
+    "url": "posts/switched-to-arch.html",
+    "readTime": "5 min read"
+  },
+  {
+    "title": "Customizing Your Linux Desktop with i3wm",
+    "topic": "linux",
+    "date": "2024-12-20",
+    "summary": "A step-by-step guide to setting up and configuring the i3 window manager for maximum efficiency.",
+    "url": "posts/i3wm-setup.html",
+    "readTime": "12 min read"
+  },
+  {
+    "title": "Building RESTful APIs with Flask",
+    "topic": "technical-skills",
+    "date": "2025-01-12",
+    "summary": "Learn how to create scalable REST APIs using Flask and best practices for API design.",
+    "url": "posts/flask-rest-api.html",
+    "readTime": "9 min read"
+  },
+  {
+    "title": "Modern JavaScript ES6+ Features",
+    "topic": "technical-skills",
+    "date": "2024-12-30",
+    "summary": "Discover arrow functions, destructuring, async/await, and other powerful ES6+ features.",
+    "url": "posts/javascript-es6.html",
+    "readTime": "8 min read"
+  },
+  {
+    "title": "Git Workflow for Teams",
+    "topic": "technical-skills",
+    "date": "2024-12-15",
+    "summary": "Best practices for collaborative development using Git branching strategies and pull requests.",
+    "url": "posts/git-team-workflow.html",
+    "readTime": "7 min read"
+  },
+  {
+    "title": "Building a Home Network Lab",
+    "topic": "hardware-networking",
+    "date": "2025-01-08",
+    "summary": "Set up your own network lab for learning and experimentation with routers, switches, and servers.",
+    "url": "posts/home-network-lab.html",
+    "readTime": "11 min read"
+  },
+  {
+    "title": "Virtualization with VMware: A Complete Guide",
+    "topic": "hardware-networking",
+    "date": "2024-12-25",
+    "summary": "Master VMware Workstation to create and manage virtual machines for testing and development.",
+    "url": "posts/vmware-complete-guide.html",
+    "readTime": "10 min read"
+  },
+  {
+    "title": "Troubleshooting Common Hardware Issues",
+    "topic": "hardware-networking",
+    "date": "2024-12-10",
+    "summary": "Practical tips for diagnosing and fixing common PC hardware problems like a pro.",
+    "url": "posts/hardware-troubleshooting.html",
+    "readTime": "6 min read"
+  }
+]
