@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mastering the Linux Terminal - Srijit Roy</title>
+    <link rel="icon" href="/favicons/favicon-32x32.png" type="image/png">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo" onclick="window.location.href='linux_terminal.html'" onkeydown="if(event.key === 'Enter'){ window.location.href='../../index.html'; }" role="button" title="Go to homepage" tabindex="0"><strong>SR</strong></div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="../../index.html#home">Home</a></li>
+                <li><a href="../../index.html#about">About</a></li>
+                <li><a href="../../index.html#skills">Skills</a></li>
+                <li><a href="../../index.html#projects">Projects</a></li>
+                <li><a href="../../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+
+    <!-- Article Content -->
+    <article class="blog-post">
+        <div class="container blog-container">
+            <!-- Breadcrumb -->
+            <div class="breadcrumb">
+                <a href="../../index.html"><i class="fas fa-home"></i> Home</a>
+                <span class="separator">/</span>
+                <a href="../linux.html">Linux</a>
+                <span class="separator">/</span>
+                <span>Mastering the Linux Terminal</span>
+            </div>
+
+            <!-- Article Header -->
+            <header class="post-header">
+                <h1 class="post-title">Mastering the Linux Terminal</h1>
+                <div class="post-meta">
+                    <span class="post-date">
+                        <i class="far fa-calendar"></i>
+                        August 18, 2025
+                    </span>
+                    <span class="post-read-time">
+                        <i class="far fa-clock"></i>
+                        10 min read
+                    </span>
+                    <span class="post-category">
+                        <i class="fas fa-tag"></i>
+                        Linux
+                    </span>
+                </div>
+            </header>
+
+<!-- Article Body -->
+<div class="post-content">
+    <p class="lead">
+        The Linux terminal is the heart of the Linux operating system. While graphical interfaces make daily tasks easier, the terminal provides direct access to the system, offering speed, precision, and full control. Over time, the terminal became my primary workspace for understanding how Linux truly operates.
+    </p>
+
+    <h2>What is the Linux Terminal?</h2>
+    <p>
+        The Linux terminal is a text-based interface used to communicate with the operating system through commands. These commands are interpreted by a shell, which then interacts with the Linux kernel to perform actions such as file management, process control, and system configuration.
+    </p>
+
+    <h2>Why the Linux Terminal Matters</h2>
+    <ul>
+        <li>Executes tasks faster than graphical tools</li>
+        <li>Enables automation using scripts</li>
+        <li>Essential for servers and remote systems</li>
+        <li>Provides deeper system understanding</li>
+    </ul>
+
+    <h2>Linux Shells</h2>
+
+    <h3>Bash (Bourne Again Shell)</h3>
+    <p>
+        Bash is the default shell on most Linux distributions. It is stable, powerful, and widely supported.
+        Bash scripting is heavily used for automation, system administration, and DevOps workflows.
+    </p>
+     <div class="photo-area-inline">
+            <img src="../../imges/bash.png" alt="Terminal Experience Photo" class="work-photo">
+        </div>
+    <h3>Fish (Friendly Interactive Shell)</h3>
+    <p>
+        Fish focuses on usability and works well without configuration. Features like syntax highlighting
+        and command suggestions make it beginner-friendly yet powerful.
+    </p>
+    <div class="photo-area-inline">
+            <img src="../../imges/fish.png" alt="Terminal Experience Photo" class="work-photo">
+        </div>
+    <h3>Zsh (Z Shell)</h3>
+    <p>
+        Zsh improves upon Bash with better auto-completion, command correction, and customization.
+        Tools like <strong>Oh My Zsh</strong> make it a favorite among developers but i am not using it.
+    </p>
+    <div class="photo-area-inline">
+            <img src="../../imges/zsh.png" alt="Terminal Experience Photo" class="work-photo">
+        </div>
+    <h2>Terminal Text Editors</h2>
+    <p>
+        Terminal-based editors are lightweight, fast, and available on almost every Linux system.
+        They are especially useful when working on remote servers.
+    </p>
+
+    <h3>Nano Editor</h3>
+    <p>
+        Nano is a simple, beginner-friendly editor. Shortcut keys are displayed at the bottom of the screen,
+        making it easy to learn and use.
+    </p>
+    <h4>Common Nano Shortcuts</h4>
+    <ul>
+        <li><strong>Ctrl + O</strong> - Save the file</li>
+        <li><strong>Ctrl + X</strong> - Exit Nano</li>
+        <li><strong>Ctrl + W</strong> - Search for text</li>
+        <li><strong>Ctrl + K</strong> - Cut a line</li>
+        <li><strong>Ctrl + U</strong> - Paste a line</li>
+        <li><strong>Ctrl + G</strong> - Open help menu</li>
+    </ul>
+    <div class="photo-area-inline">
+            <img src="../../imges/nano.png" alt="Terminal Experience Photo" class="work-photo">
+        </div>
+    
+    <h3>Vim Editor</h3>
+    <p>
+        Vim is a powerful modal editor known for speed and efficiency. It operates in different modes,
+        primarily Normal mode and Insert mode.
+    </p>
+
+    <h4>Basic Vim Modes</h4>
+    <ul>
+        <li><strong>Normal Mode</strong> - Navigate and run commands</li>
+        <li><strong>Insert Mode</strong> - Edit text</li>
+        <li><strong>Command Mode</strong> - Save, quit, and configure</li>
+    </ul>
+
+    <h4>Common Vim Shortcuts</h4>
+    <div class="shortcuts-photo-wrapper">
+        <div class="shortcuts-section">
+            <ul>
+                <li><strong>i</strong> - Switch to Insert mode</li>
+                <li><strong>Esc</strong> - Return to Normal mode</li>
+                <li><strong>:w</strong> - Save file</li>
+                <li><strong>:q</strong> - Quit Vim</li>
+                <li><strong>:wq</strong> - Save and quit</li>
+                <li><strong>dd</strong> - Delete a line</li>
+                <li><strong>yy</strong> - Copy a line</li>
+                <li><strong>p</strong> - Paste copied or deleted text</li>
+                <li><strong>/text</strong> - Search for text</li>
+            </ul>
+        </div>
+        <div class="photo-area-inline">
+            <img src="../../imges/vim.png" alt="Terminal Experience Photo" class="work-photo">
+        </div>
+    </div>
+
+    <h2>Shell Scripting and Automation</h2>
+    <p>
+        The Linux terminal truly shines when tasks are automated. Shell scripts allow repetitive jobs
+        such as backups, updates, and monitoring to be handled efficiently and consistently.
+    </p>
+
+    <h2>Conclusion</h2>
+    <p>
+        The Linux terminal is a core skill for anyone using Linux seriously. Shells like Bash, Zsh,
+        and Fish define how users interact with the system, while editors like Nano and Vim make
+        terminal-based editing efficient and reliable.
+    </p>
+
+    <p>
+        Mastering terminal commands and editor shortcuts significantly improves productivity
+        and builds confidence when working with Linux systems.
+    </p>
+</div>
+
+
+                <div class="post-tags">
+                    <span class="tag">Linux</span>
+                    <span class="tag">Terminal</span>
+                    <span class="tag">Command Line</span>
+                    <span class="tag">Productivity</span>
+                </div>
+            </div>
+
+            <!-- Post Navigation -->
+            <div class="post-navigation">
+                <a href="../linux.html" class="btn secondary-btn">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Linux
+                </a>
+            </div>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">SR</div>
+                <p>© 2025 Srijit Roy.</p>
+                <div class="footer-social">
+                    <a href="https://github.com/Srijit4514" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/srijit-roy-377077282/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/darks04yt/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/Srijit786" target="_blank"><i class="fab fa-x"></i></a>
+                    <a href="https://discord.com/users/963409962959245362" target="_blank"><i class="fab fa-discord"></i></a>
+                </div>
+                <div class="terminal-quote">
+                    <span>Built with <i class="fas fa-laptop-code"></i> and <i class="fas fa-coffee"></i> by Srijit Roy</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="../../script.js"></script>
+</body>
+</html>

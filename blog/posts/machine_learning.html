@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started with Machine Learning - Srijit Roy</title>
+    <link rel="icon" href="/favicons/favicon-32x32.png" type="image/png">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo" onclick="window.location.href='ml-getting-started.html'" onkeydown="if(event.key === 'Enter'){ window.location.href='../../index.html'; }" role="button" title="Go to homepage" tabindex="0"><strong>SR</strong></div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="../../index.html#home">Home</a></li>
+                <li><a href="../../index.html#about">About</a></li>
+                <li><a href="../../index.html#skills">Skills</a></li>
+                <li><a href="../../index.html#projects">Projects</a></li>
+                <li><a href="../../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+
+    <!-- Article Content -->
+    <article class="blog-post">
+        <div class="container blog-container">
+            <!-- Breadcrumb -->
+            <div class="breadcrumb">
+                <a href="../../index.html"><i class="fas fa-home"></i> Home</a>
+                <span class="separator">/</span>
+                <a href="../data-science.html">Data Science</a>
+                <span class="separator">/</span>
+                <span>Machine Learning</span>
+            </div>
+
+            <!-- Article Header -->
+            <header class="post-header">
+                <h1 class="post-title">Let's Dive into Machine Learning</h1>
+                <div class="post-meta">
+                    <span class="post-date">
+                        <i class="far fa-calendar"></i>
+                        August 25, 2025
+                    </span>
+                    <span class="post-read-time">
+                        <i class="far fa-clock"></i>
+                        7 min read
+                    </span>
+                    <span class="post-category">
+                        <i class="fas fa-tag"></i>
+                        Data Science
+                    </span>
+                </div>
+            </header>
+
+            <!-- Article Body -->
+<div class="post-content">
+    <p class="lead">
+        Machine Learning is one of the most important pillars of data science. While statistics helps explain what happened in the past, machine learning focuses on learning patterns from data and making predictions or decisions based on those patterns. As I progressed in data science, machine learning changed how I approached real-world problems.
+    </p>
+
+    <h2>What is Machine Learning?</h2>
+    <p>
+        Machine Learning (ML) is a subset of artificial intelligence that enables systems to learn from data without being explicitly programmed. Instead of writing fixed rules, we provide data and algorithms that allow the model to discover relationships and improve its performance over time.
+    </p>
+
+    <h2>Why Machine Learning Matters in Data Science</h2>
+    <p>
+        In data science, the goal is not just to analyze data but to extract actionable insights. Machine learning helps automate this process by building models that can predict outcomes, classify information, and uncover hidden structures in large datasets.
+    </p>
+
+    <ul>
+        <li>Predict future trends and behaviors</li>
+        <li>Automate decision-making processes</li>
+        <li>Identify patterns not visible through manual analysis</li>
+    </ul>
+
+    <h2>Types of Machine Learning</h2>
+
+    <h3>Supervised Learning</h3>
+    <p>
+        In supervised learning, models are trained on labeled data. This means the input data comes with known outputs. I commonly use supervised learning for tasks like prediction and classification.
+    </p>
+    <ul>
+        <li><strong>Regression:</strong> Predicting continuous values such as prices or scores</li>
+        <li><strong>Classification:</strong> Categorizing data into predefined classes</li>
+    </ul>
+
+    <h3>Unsupervised Learning</h3>
+    <p>
+        Unsupervised learning works with unlabeled data. The model tries to find hidden patterns or groupings without prior knowledge of the outcomes.
+    </p>
+    <ul>
+        <li><strong>Clustering:</strong> Grouping similar data points</li>
+        <li><strong>Dimensionality Reduction:</strong> Simplifying high-dimensional data</li>
+    </ul>
+
+    <h3>Reinforcement Learning</h3>
+    <p>
+        Reinforcement learning focuses on learning through interaction with an environment. The model learns by receiving rewards or penalties for its actions. This approach is commonly used in robotics, gaming, and control systems.
+    </p>
+
+    <h2>Core Machine Learning Workflow</h2>
+    <ol>
+        <li><strong>Data Collection:</strong> Gathering relevant and reliable data</li>
+        <li><strong>Data Preprocessing:</strong> Cleaning, handling missing values, and scaling features</li>
+        <li><strong>Feature Engineering:</strong> Selecting and transforming variables to improve model performance</li>
+        <li><strong>Model Selection:</strong> Choosing appropriate algorithms based on the problem</li>
+        <li><strong>Training and Evaluation:</strong> Measuring performance using suitable metrics</li>
+    </ol>
+
+    <h2>Popular Machine Learning Algorithms</h2>
+    <ul>
+        <li><strong>Linear Regression:</strong> Simple and interpretable predictive modeling</li>
+        <li><strong>Logistic Regression:</strong> Classification for binary outcomes</li>
+        <li><strong>Decision Trees:</strong> Rule-based models that are easy to visualize</li>
+        <li><strong>Random Forest:</strong> Ensemble method that improves accuracy and reduces overfitting</li>
+        <li><strong>K-Means:</strong> Clustering algorithm for unsupervised learning</li>
+    </ul>
+
+    <h2>Machine Learning with Python</h2>
+    <p>
+        Python is the most widely used language for machine learning in data science. Libraries like NumPy and Pandas handle data preparation, while scikit-learn provides efficient implementations of most classical ML algorithms.
+    </p>
+
+    <div class="code-block">
+        <pre><code>from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error
+
+X = df[["feature1", "feature2"]]
+y = df["target"]
+
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, random_state=42
+)
+
+model = LinearRegression()
+model.fit(X_train, y_train)
+
+predictions = model.predict(X_test)
+error = mean_squared_error(y_test, predictions)
+print(error)</code></pre>
+    </div>
+
+    <h2>Model Evaluation and Overfitting</h2>
+    <p>
+        A key lesson I learned is that a model performing well on training data does not guarantee good real-world performance. Techniques like cross-validation, regularization, and proper evaluation metrics help prevent overfitting.
+    </p>
+
+    <h2>Machine Learning in Real-World Applications</h2>
+    <ul>
+        <li>Recommendation systems</li>
+        <li>Fraud detection</li>
+        <li>Customer segmentation</li>
+        <li>Predictive maintenance</li>
+        <li>Natural language processing</li>
+    </ul>
+
+    <h2>Challenges in Machine Learning</h2>
+    <p>
+        Machine learning is powerful, but it comes with challenges. Poor data quality, biased datasets, and misinterpreted results can lead to incorrect conclusions. Understanding the data and the problem domain is just as important as choosing the right algorithm.
+    </p>
+
+    <h2>Conclusion</h2>
+    <p>
+        Machine learning has become an essential part of data science. It allows us to move beyond descriptive analysis and build systems that learn from data and adapt over time. With a solid understanding of fundamentals and consistent practice, machine learning becomes a practical and impactful tool for solving real-world data problems.
+    </p>
+</div>
+            <!-- Post Tags -->
+
+                <div class="post-tags">
+                    <span class="tag">Machine Learning</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Data Science</span>
+                    <span class="tag">Beginner Guide</span>
+                </div>
+            </div>
+
+            <!-- Post Navigation -->
+            <div class="post-navigation">
+                <a href="../data-science.html" class="btn secondary-btn">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Data Science
+                </a>
+            </div>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">SR</div>
+                <p>© 2025 Srijit Roy.</p>
+                <div class="footer-social">
+                    <a href="https://github.com/Srijit4514" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/srijit-roy-377077282/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/darks04yt/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/Srijit786" target="_blank"><i class="fab fa-x"></i></a>
+                    <a href="https://discord.com/users/963409962959245362" target="_blank"><i class="fab fa-discord"></i></a>
+                </div>
+                <div class="terminal-quote">
+                    <span>Built with <i class="fas fa-laptop-code"></i> and <i class="fas fa-coffee"></i> by Srijit Roy</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="../../script.js"></script>
+</body>
+</html>

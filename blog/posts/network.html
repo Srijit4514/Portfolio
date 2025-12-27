@@ -15,7 +15,7 @@
 
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="logo" onclick="window.location.href='../../index.html'" onkeydown="if(event.key === 'Enter'){ window.location.href='../../index.html'; }" role="button" title="Go to homepage" tabindex="0"><strong>SR</strong></div>
+        <div class="logo" onclick="window.location.href='network.html'" onkeydown="if(event.key === 'Enter'){ window.location.href='../../index.html'; }" role="button" title="Go to homepage" tabindex="0"><strong>SR</strong></div>
         <div class="nav-links">
             <ul>
                 <li><a href="../../index.html#home">Home</a></li>
@@ -50,11 +50,11 @@
                 <div class="post-meta">
                     <span class="post-date">
                         <i class="far fa-calendar"></i>
-                        December 25, 2024
+                        January 08, 2025
                     </span>
                     <span class="post-read-time">
                         <i class="far fa-clock"></i>
-                        10 min read
+                        8 min read
                     </span>
                     <span class="post-category">
                         <i class="fas fa-tag"></i>
@@ -64,182 +64,166 @@
             </header>
 
             <!-- Article Body -->
-            <div class="post-content">
-                <p class="lead">Virtualization has revolutionized how we use computers. VMware Workstation allows you to run multiple operating systems simultaneously on a single machine, making it perfect for testing, development, and learning.</p>
+<div class="post-content">
+    <p class="lead">
+        Computer networking is the backbone of modern communication systems. From browsing the web to cloud computing, networking technologies like TCP/IP, routing protocols, and network layers enable devices to communicate reliably and efficiently across the globe.
+    </p>
 
-                <h2>What is Virtualization?</h2>
-                <p>Virtualization creates a software-based (virtual) representation of computer hardware. Instead of running one operating system directly on physical hardware, you can run multiple virtual machines (VMs), each with its own OS, on a single physical computer.</p>
+    <h2>What is Computer Networking?</h2>
+    <p>
+        Computer networking is the practice of connecting multiple devices (computers, servers, routers, switches) to share data, resources, and services. Networks can be small (local networks) or large (the internet), and they rely on standardized protocols to ensure proper communication.
+    </p>
 
-                <h3>Benefits of Virtualization</h3>
-                <ul>
-                    <li><strong>Isolation:</strong> Test software safely without affecting your main system</li>
-                    <li><strong>Cost Savings:</strong> Run multiple servers on one physical machine</li>
-                    <li><strong>Easy Backups:</strong> Snapshot VMs for instant recovery</li>
-                    <li><strong>Learning Platform:</strong> Experiment with different operating systems</li>
-                    <li><strong>Development:</strong> Test applications across multiple platforms</li>
-                </ul>
+    <h2>TCP/IP Fundamentals</h2>
 
-                <h2>Getting Started with VMware Workstation</h2>
+    <h3>What is TCP/IP?</h3>
+    <p>
+        TCP/IP (Transmission Control Protocol / Internet Protocol) is the core protocol suite of the internet. It defines how data is packetized, addressed, transmitted, routed, and received between devices.
+    </p>
 
-                <h3>System Requirements</h3>
-                <p>Before installing VMware, ensure your system meets these requirements:</p>
-                <ul>
-                    <li>64-bit processor with virtualization extensions (Intel VT-x or AMD-V)</li>
-                    <li>Minimum 4GB RAM (8GB+ recommended)</li>
-                    <li>Sufficient disk space for VMs (50GB+ free recommended)</li>
-                    <li>Windows or Linux host operating system</li>
-                </ul>
+    <h3>Internet Protocol (IP)</h3>
+    <p>
+        IP is responsible for logical addressing and routing of packets. Each device on a network is assigned an IP address, which uniquely identifies it.
+    </p>
+    <ul>
+        <li><strong>IPv4:</strong> 32-bit address (e.g., 192.168.1.1)</li>
+        <li><strong>IPv6:</strong> 128-bit address, designed to replace IPv4</li>
+    </ul>
 
-                <h3>Installing VMware Workstation</h3>
-                <ol>
-                    <li>Download VMware Workstation Pro or Player from the official website</li>
-                    <li>Run the installer and follow the setup wizard</li>
-                    <li>Enter your license key (Pro) or use the free Player version</li>
-                    <li>Restart your computer after installation</li>
-                </ol>
+    <h3>Transmission Control Protocol (TCP)</h3>
+    <p>
+        TCP ensures reliable data transmission by establishing a connection, sequencing packets, handling retransmissions, and providing error control.
+    </p>
+    <ul>
+        <li>Connection-oriented communication</li>
+        <li>Guaranteed delivery and ordering</li>
+        <li>Flow and congestion control</li>
+    </ul>
 
-                <h2>Creating Your First Virtual Machine</h2>
+    <h3>UDP vs TCP</h3>
+    <ul>
+        <li><strong>TCP:</strong> Reliable, slower, used for HTTP, HTTPS, FTP</li>
+        <li><strong>UDP:</strong> Fast, connectionless, used for DNS, streaming, VoIP</li>
+    </ul>
 
-                <h3>Step-by-Step VM Creation</h3>
-                <div class="code-block">
-                    <pre><code>1. Open VMware Workstation
-2. Click "Create a New Virtual Machine"
-3. Select "Typical" configuration
-4. Choose installation source:
-   - Install from ISO image
-   - Install later
-5. Select guest OS (e.g., Ubuntu 22.04)
-6. Name your VM and choose storage location
-7. Specify disk size (20GB minimum for Linux)
-8. Customize hardware if needed:
-   - Allocate RAM (2-4GB for basic systems)
-   - Assign CPU cores
-   - Configure network adapter
-9. Click "Finish" to create the VM</code></pre>
-                </div>
+    <h2>Network Layers</h2>
 
-                <h3>Recommended VM Settings</h3>
-                <p>For optimal performance, consider these settings:</p>
-                <ul>
-                    <li><strong>Memory:</strong> 2GB minimum, 4GB+ for modern OSs</li>
-                    <li><strong>Processors:</strong> 2 cores for most systems</li>
-                    <li><strong>Hard Disk:</strong> Allocate dynamically for space efficiency</li>
-                    <li><strong>Network:</strong> NAT for internet access, Bridged for network services</li>
-                </ul>
+    <h3>OSI Model (7 Layers)</h3>
+    <p>
+        The OSI model provides a conceptual framework for understanding network communication.
+    </p>
+    <ol>
+        <li><strong>Physical:</strong> Cables, signals, hardware</li>
+        <li><strong>Data Link:</strong> MAC addressing, switching</li>
+        <li><strong>Network:</strong> IP addressing and routing</li>
+        <li><strong>Transport:</strong> TCP and UDP</li>
+        <li><strong>Session:</strong> Session management</li>
+        <li><strong>Presentation:</strong> Encryption, compression</li>
+        <li><strong>Application:</strong> HTTP, FTP, SMTP, DNS</li>
+    </ol>
 
-                <h2>Essential VMware Features</h2>
+    <h3>TCP/IP Model (4 Layers)</h3>
+    <ul>
+        <li><strong>Network Interface</strong></li>
+        <li><strong>Internet</strong></li>
+        <li><strong>Transport</strong></li>
+        <li><strong>Application</strong></li>
+    </ul>
 
-                <h3>Snapshots</h3>
-                <p>Snapshots capture your VM's state at a specific point in time:</p>
-                <div class="code-block">
-                    <pre><code>Creating a Snapshot:
-1. Select your VM
-2. VM Menu > Snapshot > Take Snapshot
-3. Name your snapshot descriptively
-4. Add optional description
-5. Click "Take Snapshot"
+    <h2>Routers and Wi-Fi Configuration</h2>
 
-Restoring from Snapshot:
-1. VM Menu > Snapshot > Snapshot Manager
-2. Select the snapshot
-3. Click "Go To" or "Restore"</code></pre>
-                </div>
+    <h3>What is a Router?</h3>
+    <p>
+        A router connects different networks and forwards packets based on IP addresses. Home routers typically combine routing, switching, firewall, and wireless access point functionalities.
+    </p>
 
-                <h3>Shared Folders</h3>
-                <p>Share files between host and guest systems:</p>
-                <div class="code-block">
-                    <pre><code>Setup Shared Folders:
-1. VM Menu > Settings
-2. Options tab > Shared Folders
-3. Click "Add" to create new shared folder
-4. Browse to host folder path
-5. Name the share
-6. Enable "Always enabled"
-7. Install VMware Tools in guest OS
-8. Access shared folder in guest system</code></pre>
-                </div>
+    <h3>Basic Router Configuration</h3>
+    <ol>
+        <li>Access router admin panel (e.g., 192.168.1.1)</li>
+        <li>Change default username and password</li>
+        <li>Configure WAN settings (ISP provided)</li>
+        <li>Set LAN IP range and DHCP</li>
+        <li>Enable firewall and NAT</li>
+    </ol>
 
-                <h3>Cloning VMs</h3>
-                <p>Create copies of existing VMs quickly:</p>
-                <ul>
-                    <li><strong>Full Clone:</strong> Complete independent copy</li>
-                    <li><strong>Linked Clone:</strong> Shares disk with parent VM, saves space</li>
-                </ul>
+    <h3>Wi-Fi Configuration Best Practices</h3>
+    <ul>
+        <li>Use WPA3 or WPA2 encryption</li>
+        <li>Change default SSID name</li>
+        <li>Use strong Wi-Fi passwords</li>
+        <li>Select optimal Wi-Fi channel</li>
+        <li>Disable WPS for better security</li>
+    </ul>
 
-                <h2>Network Configuration</h2>
+    <h2>Routing and Routing Tables</h2>
 
-                <h3>Network Adapter Types</h3>
-                <ul>
-                    <li><strong>NAT:</strong> VM shares host's IP, good for internet access</li>
-                    <li><strong>Bridged:</strong> VM gets own IP on network, acts like physical machine</li>
-                    <li><strong>Host-Only:</strong> Private network between host and VMs</li>
-                    <li><strong>Custom:</strong> User-defined virtual networks</li>
-                </ul>
+    <h3>What is a Routing Table?</h3>
+    <p>
+        A routing table is a set of rules that determines where network packets should be forwarded. Routers use routing tables to decide the next hop for each packet.
+    </p>
 
-                <h2>Performance Optimization Tips</h2>
+    <h3>Static Routing</h3>
+    <p>
+        Static routing involves manually configuring routes. It is simple and secure but not scalable.
+    </p>
+    <ul>
+        <li>Low overhead</li>
+        <li>No automatic updates</li>
+        <li>Suitable for small networks</li>
+    </ul>
 
-                <h3>Host System Optimization</h3>
-                <ul>
-                    <li>Close unnecessary applications before running VMs</li>
-                    <li>Store VMs on SSD for better performance</li>
-                    <li>Allocate RAM wisely - don't over-commit</li>
-                    <li>Enable hardware virtualization in BIOS</li>
-                </ul>
+    <h3>Dynamic Routing</h3>
+    <p>
+        Dynamic routing protocols automatically learn and update routes based on network changes.
+    </p>
 
-                <h3>Guest System Optimization</h3>
-                <ul>
-                    <li>Always install VMware Tools for better performance</li>
-                    <li>Disable unnecessary services in guest OS</li>
-                    <li>Use paravirtualized drivers when available</li>
-                    <li>Defragment virtual disks periodically</li>
-                </ul>
+    <h4>RIP (Routing Information Protocol)</h4>
+    <ul>
+        <li>Distance-vector protocol</li>
+        <li>Uses hop count as metric</li>
+        <li>Maximum 15 hops</li>
+        <li>Simple but outdated</li>
+    </ul>
 
-                <h2>Common Use Cases</h2>
+    <h4>OSPF (Open Shortest Path First)</h4>
+    <ul>
+        <li>Link-state protocol</li>
+        <li>Uses cost as metric</li>
+        <li>Fast convergence</li>
+        <li>Common in enterprise networks</li>
+    </ul>
 
-                <h3>Development and Testing</h3>
-                <p>Create isolated environments for:</p>
-                <ul>
-                    <li>Testing software across different OS versions</li>
-                    <li>Database server development</li>
-                    <li>Web application testing</li>
-                    <li>Security research and penetration testing</li>
-                </ul>
+    <h4>BGP (Border Gateway Protocol)</h4>
+    <ul>
+        <li>Path-vector protocol</li>
+        <li>Used between autonomous systems</li>
+        <li>Backbone of the internet</li>
+        <li>Highly scalable and policy-based</li>
+    </ul>
 
-                <h3>Learning and Certification</h3>
-                <ul>
-                    <li>Practice Linux system administration</li>
-                    <li>Set up Windows Server environments</li>
-                    <li>Create network labs for CCNA/CompTIA studies</li>
-                    <li>Experiment with different distributions</li>
-                </ul>
+    <h2>Common Networking Use Cases</h2>
+    <ul>
+        <li>Home and office networking</li>
+        <li>Enterprise infrastructure</li>
+        <li>Cloud and data center networking</li>
+        <li>Cybersecurity and monitoring</li>
+        <li>Network automation and DevOps</li>
+    </ul>
 
-                <h2>Troubleshooting Common Issues</h2>
+    <h2>Conclusion</h2>
+    <p>
+        Networking knowledge is essential for IT professionals, developers, and cybersecurity enthusiasts. Understanding TCP/IP, routing protocols, network layers, and router configuration provides a strong foundation for building, securing, and troubleshooting modern networks.
+    </p>
 
-                <h3>VM Won't Start</h3>
-                <ul>
-                    <li>Check if virtualization is enabled in BIOS</li>
-                    <li>Verify sufficient RAM and disk space</li>
-                    <li>Disable Hyper-V if on Windows</li>
-                    <li>Check for VMware service status</li>
-                </ul>
-
-                <h3>Poor Performance</h3>
-                <ul>
-                    <li>Reduce VM memory allocation</li>
-                    <li>Decrease number of running VMs</li>
-                    <li>Install VMware Tools</li>
-                    <li>Disable 3D acceleration if not needed</li>
-                </ul>
-
-                <h2>Conclusion</h2>
-                <p>VMware Workstation is an incredibly powerful tool for anyone working with multiple operating systems. Whether you're a developer, IT professional, or enthusiast, mastering virtualization opens up endless possibilities for learning and experimentation without risk to your primary system.</p>
-
-                <p>Start simple with one VM, learn the basics, and gradually build more complex environments. Before you know it, you'll be running entire virtual networks!</p>
+    <p>
+        Start with the basics, practice using network labs or virtual machines, and gradually explore advanced routing and enterprise-grade protocols to deepen your expertise.
+    </p>
+</div>
 
                 <div class="post-tags">
-                    <span class="tag">VMware</span>
-                    <span class="tag">Virtualization</span>
-                    <span class="tag">System Administration</span>
+                    <span class="tag">TCP/IP</span>
+                    <span class="tag">OSI</span>
+                    <span class="tag">Routing</span>
                     <span class="tag">Networking</span>
                 </div>
             </div>

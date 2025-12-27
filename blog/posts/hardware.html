@@ -15,7 +15,7 @@
 
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="logo" onclick="window.location.href='../../index.html'" onkeydown="if(event.key === 'Enter'){ window.location.href='../../index.html'; }" role="button" title="Go to homepage" tabindex="0"><strong>SR</strong></div>
+        <div class="logo" onclick="window.location.href='hardware.html'" onkeydown="if(event.key === 'Enter'){ window.location.href='hardware.html'; }" role="button" title="Go to homepage" tabindex="0"><strong>SR</strong></div>
         <div class="nav-links">
             <ul>
                 <li><a href="../../index.html#home">Home</a></li>
@@ -50,11 +50,11 @@
                 <div class="post-meta">
                     <span class="post-date">
                         <i class="far fa-calendar"></i>
-                        December 25, 2024
+                        December 10, 2024
                     </span>
                     <span class="post-read-time">
                         <i class="far fa-clock"></i>
-                        10 min read
+                        8 min read
                     </span>
                     <span class="post-category">
                         <i class="fas fa-tag"></i>
@@ -64,183 +64,193 @@
             </header>
 
             <!-- Article Body -->
-            <div class="post-content">
-                <p class="lead">Virtualization has revolutionized how we use computers. VMware Workstation allows you to run multiple operating systems simultaneously on a single machine, making it perfect for testing, development, and learning.</p>
+<div class="post-content">
+    <p class="lead">
+        Computer hardware forms the foundation of every computing system. From custom PC builds to laptop internals, understanding hardware components is essential for performance, reliability, and upgradability. With over six years of hands-on experience in PC building, laptop servicing, and hardware optimization, this knowledge comes from real-world practice rather than theory alone.
+    </p>
 
-                <h2>What is Virtualization?</h2>
-                <p>Virtualization creates a software-based (virtual) representation of computer hardware. Instead of running one operating system directly on physical hardware, you can run multiple virtual machines (VMs), each with its own OS, on a single physical computer.</p>
+    <h2>Understanding Computer Hardware</h2>
+    <p>
+        Computer hardware refers to the physical components of a system, including the processor, memory, storage, motherboard, power supply, and peripherals. Choosing the right hardware depends on workload requirements such as gaming, development, data science, or general productivity.
+    </p>
 
-                <h3>Benefits of Virtualization</h3>
-                <ul>
-                    <li><strong>Isolation:</strong> Test software safely without affecting your main system</li>
-                    <li><strong>Cost Savings:</strong> Run multiple servers on one physical machine</li>
-                    <li><strong>Easy Backups:</strong> Snapshot VMs for instant recovery</li>
-                    <li><strong>Learning Platform:</strong> Experiment with different operating systems</li>
-                    <li><strong>Development:</strong> Test applications across multiple platforms</li>
-                </ul>
+    <h2>Desktop PC Components</h2>
 
-                <h2>Getting Started with VMware Workstation</h2>
+    <h3>Processor (CPU)</h3>
+    <p>
+        The CPU is the brain of the computer, responsible for executing instructions and processing data.
+    </p>
+    <ul>
+        <li>Popular brands: Intel and AMD</li>
+        <li>Key factors: core count, clock speed, cache</li>
+        <li>Use cases: multitasking, gaming, virtualization</li>
+    </ul>
 
-                <h3>System Requirements</h3>
-                <p>Before installing VMware, ensure your system meets these requirements:</p>
-                <ul>
-                    <li>64-bit processor with virtualization extensions (Intel VT-x or AMD-V)</li>
-                    <li>Minimum 4GB RAM (8GB+ recommended)</li>
-                    <li>Sufficient disk space for VMs (50GB+ free recommended)</li>
-                    <li>Windows or Linux host operating system</li>
-                </ul>
+    <h3>Motherboard</h3>
+    <p>
+        The motherboard connects all components and determines compatibility and expandability.
+    </p>
+    <ul>
+        <li>Chipset and socket compatibility</li>
+        <li>RAM slots and supported speeds</li>
+        <li>PCIe slots for GPU and expansion cards</li>
+        <li>BIOS/UEFI features</li>
+    </ul>
 
-                <h3>Installing VMware Workstation</h3>
-                <ol>
-                    <li>Download VMware Workstation Pro or Player from the official website</li>
-                    <li>Run the installer and follow the setup wizard</li>
-                    <li>Enter your license key (Pro) or use the free Player version</li>
-                    <li>Restart your computer after installation</li>
-                </ol>
+    <h3>Memory (RAM)</h3>
+    <p>
+        RAM affects system responsiveness and multitasking capability.
+    </p>
+    <ul>
+        <li>DDR4 and DDR5 standards</li>
+        <li>Capacity: 8GB minimum, 16GB+ recommended</li>
+        <li>Dual-channel configuration for performance</li>
+    </ul>
 
-                <h2>Creating Your First Virtual Machine</h2>
+    <h3>Storage</h3>
+    <p>
+        Storage determines system speed and data access times.
+    </p>
+    <ul>
+        <li>HDD: high capacity, slower speeds</li>
+        <li>SSD: faster boot and load times</li>
+        <li>NVMe: highest performance via PCIe</li>
+    </ul>
 
-                <h3>Step-by-Step VM Creation</h3>
-                <div class="code-block">
-                    <pre><code>1. Open VMware Workstation
-2. Click "Create a New Virtual Machine"
-3. Select "Typical" configuration
-4. Choose installation source:
-   - Install from ISO image
-   - Install later
-5. Select guest OS (e.g., Ubuntu 22.04)
-6. Name your VM and choose storage location
-7. Specify disk size (20GB minimum for Linux)
-8. Customize hardware if needed:
-   - Allocate RAM (2-4GB for basic systems)
-   - Assign CPU cores
-   - Configure network adapter
-9. Click "Finish" to create the VM</code></pre>
-                </div>
+    <h3>Graphics Processing Unit (GPU)</h3>
+    <p>
+        The GPU handles graphics rendering and parallel workloads.
+    </p>
+    <ul>
+        <li>NVIDIA and AMD discrete GPUs</li>
+        <li>Integrated vs dedicated graphics</li>
+        <li>Used in gaming, rendering, and AI workloads</li>
+    </ul>
 
-                <h3>Recommended VM Settings</h3>
-                <p>For optimal performance, consider these settings:</p>
-                <ul>
-                    <li><strong>Memory:</strong> 2GB minimum, 4GB+ for modern OSs</li>
-                    <li><strong>Processors:</strong> 2 cores for most systems</li>
-                    <li><strong>Hard Disk:</strong> Allocate dynamically for space efficiency</li>
-                    <li><strong>Network:</strong> NAT for internet access, Bridged for network services</li>
-                </ul>
+    <h3>Power Supply Unit (PSU)</h3>
+    <p>
+        The PSU provides stable power to all components and protects against electrical issues.
+    </p>
+    <ul>
+        <li>Wattage based on system load</li>
+        <li>80+ efficiency ratings</li>
+        <li>Importance of reliable brands</li>
+    </ul>
 
-                <h2>Essential VMware Features</h2>
+    <h3>Cooling System</h3>
+    <p>
+        Cooling ensures thermal stability and component longevity.
+    </p>
+    <ul>
+        <li>Air coolers vs liquid cooling</li>
+        <li>Case airflow design</li>
+        <li>Thermal paste application</li>
+    </ul>
+    <div class="photo-area-inline">
+            <img src="../../imges/PC.png" alt="Laptop Experience Photo" class="work-photo">
+        </div>
+    <h2>PC Building Process</h2>
 
-                <h3>Snapshots</h3>
-                <p>Snapshots capture your VM's state at a specific point in time:</p>
-                <div class="code-block">
-                    <pre><code>Creating a Snapshot:
-1. Select your VM
-2. VM Menu > Snapshot > Take Snapshot
-3. Name your snapshot descriptively
-4. Add optional description
-5. Click "Take Snapshot"
+    <h3>Step-by-Step Build Overview</h3>
+    <div class="code-block">
+        <pre><code>1. Select compatible components
+2. Install CPU on motherboard
+3. Apply thermal paste and mount cooler
+4. Insert RAM modules
+5. Mount motherboard in case
+6. Install PSU and connect cables
+7. Install storage and GPU
+8. Power on and enter BIOS
+9. Install operating system and drivers</code></pre>
+    </div>
 
-Restoring from Snapshot:
-1. VM Menu > Snapshot > Snapshot Manager
-2. Select the snapshot
-3. Click "Go To" or "Restore"</code></pre>
-                </div>
+    <h2>Laptop Hardware Components</h2>
 
-                <h3>Shared Folders</h3>
-                <p>Share files between host and guest systems:</p>
-                <div class="code-block">
-                    <pre><code>Setup Shared Folders:
-1. VM Menu > Settings
-2. Options tab > Shared Folders
-3. Click "Add" to create new shared folder
-4. Browse to host folder path
-5. Name the share
-6. Enable "Always enabled"
-7. Install VMware Tools in guest OS
-8. Access shared folder in guest system</code></pre>
-                </div>
+    <h3>Laptop Processor and Chipset</h3>
+    <p>
+        Laptop CPUs are optimized for power efficiency and thermal limits.
+    </p>
+    <ul>
+        <li>Lower TDP compared to desktops</li>
+        <li>Soldered CPUs in most modern laptops</li>
+        <li>Performance vs battery life trade-offs</li>
+    </ul>
 
-                <h3>Cloning VMs</h3>
-                <p>Create copies of existing VMs quickly:</p>
-                <ul>
-                    <li><strong>Full Clone:</strong> Complete independent copy</li>
-                    <li><strong>Linked Clone:</strong> Shares disk with parent VM, saves space</li>
-                </ul>
+    <h3>RAM and Storage in Laptops</h3>
+    <ul>
+        <li>Upgradeable vs soldered RAM</li>
+        <li>M.2 SSD and SATA drives</li>
+        <li>Importance of checking upgrade options before purchase</li>
+    </ul>
 
-                <h2>Network Configuration</h2>
+    <h3>Battery and Power Management</h3>
+    <p>
+        The battery defines portability and long-term usability.
+    </p>
+    <ul>
+        <li>Battery health degradation over time</li>
+        <li>Charging cycles and replacement</li>
+        <li>Power-efficient components</li>
+    </ul>
 
-                <h3>Network Adapter Types</h3>
-                <ul>
-                    <li><strong>NAT:</strong> VM shares host's IP, good for internet access</li>
-                    <li><strong>Bridged:</strong> VM gets own IP on network, acts like physical machine</li>
-                    <li><strong>Host-Only:</strong> Private network between host and VMs</li>
-                    <li><strong>Custom:</strong> User-defined virtual networks</li>
-                </ul>
+    <h3>Thermal Design in Laptops</h3>
+    <ul>
+        <li>Heat pipes and vapor chambers</li>
+        <li>Compact cooling fans</li>
+        <li>Thermal throttling limitations</li>
+    </ul>
+    <div class="photo-area-inline">
+            <img src="../../imges/laptop.png" alt="Laptop Experience Photo" class="work-photo">
+        </div>
+    <h2>Hardware Troubleshooting Experience (6+ Years)</h2>
 
-                <h2>Performance Optimization Tips</h2>
+    <h3>Common Desktop Issues</h3>
+    <ul>
+        <li>No display or boot failure</li>
+        <li>Overheating and random shutdowns</li>
+        <li>Faulty RAM or PSU</li>
+        <li>Driver and BIOS incompatibility</li>
+    </ul>
 
-                <h3>Host System Optimization</h3>
-                <ul>
-                    <li>Close unnecessary applications before running VMs</li>
-                    <li>Store VMs on SSD for better performance</li>
-                    <li>Allocate RAM wisely - don't over-commit</li>
-                    <li>Enable hardware virtualization in BIOS</li>
-                </ul>
+    <h3>Common Laptop Issues</h3>
+    <ul>
+        <li>Battery not charging</li>
+        <li>Keyboard or touchpad failures</li>
+        <li>Overheating due to dust buildup</li>
+        <li>Broken hinges and display cables</li>
+    </ul>
 
-                <h3>Guest System Optimization</h3>
-                <ul>
-                    <li>Always install VMware Tools for better performance</li>
-                    <li>Disable unnecessary services in guest OS</li>
-                    <li>Use paravirtualized drivers when available</li>
-                    <li>Defragment virtual disks periodically</li>
-                </ul>
+    <h2>Upgrade and Maintenance Practices</h2>
 
-                <h2>Common Use Cases</h2>
+    <h3>Desktop Upgrades</h3>
+    <ul>
+        <li>RAM and storage expansion</li>
+        <li>GPU upgrades for performance</li>
+        <li>Cooling improvements</li>
+    </ul>
 
-                <h3>Development and Testing</h3>
-                <p>Create isolated environments for:</p>
-                <ul>
-                    <li>Testing software across different OS versions</li>
-                    <li>Database server development</li>
-                    <li>Web application testing</li>
-                    <li>Security research and penetration testing</li>
-                </ul>
+    <h3>Laptop Maintenance</h3>
+    <ul>
+        <li>Cleaning fans and vents</li>
+        <li>Replacing thermal paste</li>
+        <li>Upgrading SSD and RAM when possible</li>
+    </ul>
 
-                <h3>Learning and Certification</h3>
-                <ul>
-                    <li>Practice Linux system administration</li>
-                    <li>Set up Windows Server environments</li>
-                    <li>Create network labs for CCNA/CompTIA studies</li>
-                    <li>Experiment with different distributions</li>
-                </ul>
+    <h2>Conclusion</h2>
+    <p>
+        Deep hardware knowledge comes from years of hands-on experience. Building PCs, repairing laptops, and optimizing systems over six years has reinforced the importance of compatibility, cooling, power stability, and proper maintenance.
+    </p>
 
-                <h2>Troubleshooting Common Issues</h2>
-
-                <h3>VM Won't Start</h3>
-                <ul>
-                    <li>Check if virtualization is enabled in BIOS</li>
-                    <li>Verify sufficient RAM and disk space</li>
-                    <li>Disable Hyper-V if on Windows</li>
-                    <li>Check for VMware service status</li>
-                </ul>
-
-                <h3>Poor Performance</h3>
-                <ul>
-                    <li>Reduce VM memory allocation</li>
-                    <li>Decrease number of running VMs</li>
-                    <li>Install VMware Tools</li>
-                    <li>Disable 3D acceleration if not needed</li>
-                </ul>
-
-                <h2>Conclusion</h2>
-                <p>VMware Workstation is an incredibly powerful tool for anyone working with multiple operating systems. Whether you're a developer, IT professional, or enthusiast, mastering virtualization opens up endless possibilities for learning and experimentation without risk to your primary system.</p>
-
-                <p>Start simple with one VM, learn the basics, and gradually build more complex environments. Before you know it, you'll be running entire virtual networks!</p>
+    <p>
+        Whether assembling a custom desktop or maintaining a laptop, understanding hardware fundamentals enables better performance, longer lifespan, and informed upgrade decisions.
+    </p>
+</div>
 
                 <div class="post-tags">
-                    <span class="tag">VMware</span>
-                    <span class="tag">Virtualization</span>
-                    <span class="tag">System Administration</span>
-                    <span class="tag">Networking</span>
+                    <span class="tag">Hardware</span>
+                    <span class="tag">PC & Laptop</span>
+                    <span class="tag">Troubleshooting</span>
+                    <span class="tag">Practical Guide</span>
                 </div>
             </div>
 

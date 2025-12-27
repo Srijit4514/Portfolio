@@ -1,24 +1,24 @@
 [
   {
-    "title": "Getting Started with Machine Learning",
+    "title": "Let's Dive into Machine Learning",
     "topic": "data-science",
-    "date": "2025-01-15",
+    "date": "2025-08-25",
     "summary": "A comprehensive guide to understanding the fundamentals of machine learning and its real-world applications.",
-    "url": "posts/ml-getting-started.html",
-    "readTime": "8 min read"
+    "url": "posts/machine_learning.html",
+    "readTime": "7 min read"
   },
   {
     "title": "Python for Data Analysis: Essential Libraries",
     "topic": "data-science",
-    "date": "2025-01-10",
+    "date": "2025-09-08",
     "summary": "Explore NumPy, Pandas, and Matplotlib - the essential toolkit for any data scientist.",
     "url": "posts/python_with_libraries.html",
-    "readTime": "6 min read"
+    "readTime": "5 min read"
   },
   {
     "title": "Getting Started with Data Visualization",
     "topic": "data-science",
-    "date": "2024-12-28",
+    "date": "2024-10-09",
     "summary": "Learn the essentials of charts, color, and storytelling to make your data memorable.",
     "url": "posts/data_visualization.html",
     "readTime": "8 min read"
@@ -26,24 +26,24 @@
   {
     "title": "Mastering the Linux Terminal",
     "topic": "linux",
-    "date": "2025-01-18",
+    "date": "2025-08-18",
     "summary": "Essential commands and techniques every Linux user should know to boost productivity.",
-    "url": "posts/linux-terminal-mastery.html",
+    "url": "posts/linux_terminal.html",
     "readTime": "10 min read"
   },
   {
-    "title": "Why I Switched to Arch Linux",
+    "title": "Linux OS and Linux Distributions",
     "topic": "linux",
-    "date": "2025-01-05",
+    "date": "2025-05-05",
     "summary": "My journey from Ubuntu to Arch Linux, and why the customization and control were worth it.",
     "url": "posts/linux_os.html",
-    "readTime": "5 min read"
+    "readTime": "7 min read"
   },
   {
-    "title": "Customizing Your Linux Desktop with i3wm",
+    "title": "Customizing My First Linux Setup",
     "topic": "linux",
     "date": "2024-12-20",
-    "summary": "A step-by-step guide to setting up and configuring the i3 window manager for maximum efficiency.",
+    "summary": "A personal experience of migrating from Windows to Linux, beginning with Ubuntu, mastering Arch Linux through customization, and exploring Kali Linux in a virtual environment.",
     "url": "posts/linux_setup.html",
     "readTime": "12 min read"
   },
@@ -58,8 +58,8 @@
   {
     "title": "Database Management Systems: An Overview",
     "topic": "technical-skills",
-    "date": "2024-12-30",
-    "summary": "Discover arrow functions, destructuring, async/await, and other powerful ES6+ features.",
+    "date": "2025-07-15",
+    "summary": "Understand DBMS fundamentals, SQL basics, and how MySQL, PostgreSQL, and SQLite are used to store, manage, and secure data in modern applications.",
     "url": "posts/dbms.html",
     "readTime": "8 min read"
   },
@@ -75,9 +75,9 @@
     "title": "Building a Home Network Lab",
     "topic": "hardware-networking",
     "date": "2025-01-08",
-    "summary": "Set up your own network lab for learning and experimentation with routers, switches, and servers.",
+    "summary": "Set up your own network lab for learning and experimentation with routers, TCP/IP, switches, and servers.",
     "url": "posts/network.html",
-    "readTime": "11 min read"
+    "readTime": "8 min read"
   },
   {
     "title": "Virtualization with VMware: A Complete Guide",
@@ -88,11 +88,11 @@
     "readTime": "10 min read"
   },
   {
-    "title": "Troubleshooting Common Hardware Issues",
+    "title": "PC and Laptop Hardware Essentials: A Practical Guide",
     "topic": "hardware-networking",
     "date": "2024-12-10",
-    "summary": "Practical tips for diagnosing and fixing common PC hardware problems like a pro.",
+    "summary": "A practical overview of PC building and laptop hardware based on six years of hands-on experience.",
     "url": "posts/hardware.html",
-    "readTime": "6 min read"
+    "readTime": "8 min read"
   }
 ]

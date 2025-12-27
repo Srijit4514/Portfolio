@@ -15,7 +15,7 @@
 
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="logo" onclick="window.location.href='../../index.html'" onkeydown="if(event.key === 'Enter'){ window.location.href='../../index.html'; }" role="button" title="Go to homepage" tabindex="0"><strong>SR</strong></div>
+        <div class="logo" onclick="window.location.href='git_github.html'" onkeydown="if(event.key === 'Enter'){ window.location.href='../../index.html'; }" role="button" title="Go to homepage" tabindex="0"><strong>SR</strong></div>
         <div class="nav-links">
             <ul>
                 <li><a href="../../index.html#home">Home</a></li>
@@ -50,11 +50,11 @@
                 <div class="post-meta">
                     <span class="post-date">
                         <i class="far fa-calendar"></i>
-                        January 12, 2025
+                        December 15, 2024
                     </span>
                     <span class="post-read-time">
                         <i class="far fa-clock"></i>
-                        9 min read
+                        7 min read
                     </span>
                     <span class="post-category">
                         <i class="fas fa-tag"></i>
@@ -64,209 +64,148 @@
             </header>
 
             <!-- Article Body -->
-            <div class="post-content">
-                <p class="lead">Flask is a lightweight and powerful Python web framework perfect for building RESTful APIs. In this guide, we'll create a complete REST API from scratch, implementing best practices for scalable and maintainable code.</p>
+<div class="post-content">
+    <p class="lead">
+        Git is a distributed version control system that helps developers track changes, collaborate efficiently, and manage code history. In this guide, we’ll cover Git fundamentals, common commands, team workflows, GitHub and GitLab platforms.
+    </p>
 
-                <h2>Why Flask for APIs?</h2>
-                <p>Flask offers several advantages for API development:</p>
-                <ul>
-                    <li>Lightweight and minimalist - only what you need</li>
-                    <li>Flexible architecture - build it your way</li>
-                    <li>Extensive ecosystem of extensions</li>
-                    <li>Easy to learn and quick to prototype</li>
-                    <li>Production-ready with proper configuration</li>
-                </ul>
+    <h2>What is Git?</h2>
+    <p>
+        Git is an open-source distributed version control system created by Linus Torvalds. It allows developers to track changes in source code, revert to previous versions, and collaborate without overwriting each other’s work.
+    </p>
 
-                <h2>Setting Up Your Project</h2>
-                <p>First, create a virtual environment and install Flask:</p>
-                <div class="code-block">
-                    <pre><code># Create virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+    <h2>Why Use Git?</h2>
+    <ul>
+        <li>Tracks complete history of code changes</li>
+        <li>Supports parallel development with branches</li>
+        <li>Works offline with full repository access</li>
+        <li>Fast and scalable for large projects</li>
+        <li>Industry standard for software development</li>
+    </ul>
 
-# Install Flask
-pip install Flask flask-sqlalchemy flask-cors</code></pre>
-                </div>
+    <h2>Basic Git Workflow</h2>
+    <p>The standard Git workflow follows these stages:</p>
+    <ol>
+        <li><strong>Working Directory</strong> – Modify files locally</li>
+        <li><strong>Staging Area</strong> – Select changes to commit</li>
+        <li><strong>Repository</strong> – Save changes permanently with commits</li>
+    </ol>
 
-                <h2>Creating Your First API</h2>
-                <p>Let's build a simple books API with CRUD operations:</p>
-                <div class="code-block">
-                    <pre><code>from flask import Flask, jsonify, request
-from flask_cors import CORS
+    <h2>Essential Git Commands</h2>
+    <div class="code-block">
+        <pre><code># Configure Git
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
 
-app = Flask(__name__)
-CORS(app)  # Enable CORS for all routes
+# Initialize repository
+git init
 
-# In-memory database (use real DB in production)
-books = [
-    {"id": 1, "title": "Python Crash Course", "author": "Eric Matthes"},
-    {"id": 2, "title": "Flask Web Development", "author": "Miguel Grinberg"}
-]
+# Check status
+git status
 
-# GET all books
-@app.route('/api/books', methods=['GET'])
-def get_books():
-    return jsonify({"books": books}), 200
+# Add files to staging
+git add file.txt
+git add .
 
-# GET single book
-@app.route('/api/books/&lt;int:book_id&gt;', methods=['GET'])
-def get_book(book_id):
-    book = next((b for b in books if b["id"] == book_id), None)
-    if book:
-        return jsonify(book), 200
-    return jsonify({"error": "Book not found"}), 404
+# Commit changes
+git commit -m "Initial commit"
 
-# POST new book
-@app.route('/api/books', methods=['POST'])
-def create_book():
-    data = request.get_json()
-    new_book = {
-        "id": len(books) + 1,
-        "title": data.get("title"),
-        "author": data.get("author")
-    }
-    books.append(new_book)
-    return jsonify(new_book), 201
+# View history
+git log
 
-# PUT update book
-@app.route('/api/books/&lt;int:book_id&gt;', methods=['PUT'])
-def update_book(book_id):
-    book = next((b for b in books if b["id"] == book_id), None)
-    if not book:
-        return jsonify({"error": "Book not found"}), 404
-    
-    data = request.get_json()
-    book.update(data)
-    return jsonify(book), 200
+# Create a new branch
+git branch feature-login
 
-# DELETE book
-@app.route('/api/books/&lt;int:book_id&gt;', methods=['DELETE'])
-def delete_book(book_id):
-    global books
-    books = [b for b in books if b["id"] != book_id]
-    return jsonify({"message": "Book deleted"}), 200
+# Switch branch
+git checkout feature-login
+git switch main
 
-if __name__ == '__main__':
-    app.run(debug=True)</code></pre>
-                </div>
+# Merge branch
+git merge feature-login</code></pre>
+    </div>
 
-                <h2>API Best Practices</h2>
-                <h3>1. Use Proper HTTP Methods</h3>
-                <ul>
-                    <li><strong>GET</strong> - Retrieve resources</li>
-                    <li><strong>POST</strong> - Create new resources</li>
-                    <li><strong>PUT/PATCH</strong> - Update existing resources</li>
-                    <li><strong>DELETE</strong> - Remove resources</li>
-                </ul>
+    <h2>Branching Strategy</h2>
+    <p>
+        Branching allows developers to work on features independently. A common strategy includes:
+    </p>
+    <ul>
+        <li><strong>main / master</strong> – Stable production code</li>
+        <li><strong>develop</strong> – Integration branch</li>
+        <li><strong>feature</strong> – New features</li>
+        <li><strong>bugfix</strong> – Fixing issues</li>
+        <li><strong>release</strong> – Preparing releases</li>
+    </ul>
 
-                <h3>2. Implement Error Handling</h3>
-                <div class="code-block">
-                    <pre><code>@app.errorhandler(404)
-def not_found(error):
-    return jsonify({"error": "Resource not found"}), 404
+    <h2>Git Workflow for Teams</h2>
+    <p>
+        In team environments, Git enables structured collaboration using remote repositories.
+    </p>
 
-@app.errorhandler(500)
-def internal_error(error):
-    return jsonify({"error": "Internal server error"}), 500</code></pre>
-                </div>
+    <h3>Typical Team Workflow</h3>
+    <ol>
+        <li>Clone the remote repository</li>
+        <li>Create a feature branch</li>
+        <li>Make changes and commit locally</li>
+        <li>Push branch to remote</li>
+        <li>Create a Pull Request / Merge Request</li>
+        <li>Code review and merge</li>
+    </ol>
 
-                <h3>3. Validate Input Data</h3>
-                <div class="code-block">
-                    <pre><code>def validate_book_data(data):
-    if not data.get("title") or not data.get("author"):
-        return False
-    return True
+    <div class="code-block">
+        <pre><code># Clone repository
+git clone https://github.com/user/project.git
 
-@app.route('/api/books', methods=['POST'])
-def create_book():
-    data = request.get_json()
-    if not validate_book_data(data):
-        return jsonify({"error": "Invalid book data"}), 400
-    # ... rest of the code</code></pre>
-                </div>
+# Create and switch branch
+git checkout -b feature-auth
 
-                <h2>Adding Database Integration</h2>
-                <p>For production applications, use a real database with SQLAlchemy:</p>
-                <div class="code-block">
-                    <pre><code>from flask_sqlalchemy import SQLAlchemy
+# Push branch to remote
+git push origin feature-auth
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///books.db'
-db = SQLAlchemy(app)
+# Pull latest changes
+git pull origin main</code></pre>
+    </div>
 
-class Book(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.String(100), nullable=False)
-    author = db.Column(db.String(50), nullable=False)
-    
-    def to_dict(self):
-        return {
-            "id": self.id,
-            "title": self.title,
-            "author": self.author
-        }
+    <h2>What is GitHub?</h2>
+    <p>
+        GitHub is a cloud-based hosting platform for Git repositories. It adds collaboration features like pull requests, issues, actions (CI/CD), and project management tools.
+    </p>
+    <ul>
+        <li>Pull Requests for code review</li>
+        <li>GitHub Actions for CI/CD</li>
+        <li>Issues and Discussions</li>
+        <li>Large open-source community</li>
+    </ul>
 
-# Create tables
-with app.app_context():
-    db.create_all()</code></pre>
-                </div>
+    <h2>What is GitLab?</h2>
+    <p>
+        GitLab is a complete DevOps platform that provides Git repository hosting along with built-in CI/CD, security scanning, and deployment tools.
+    </p>
+    <ul>
+        <li>Integrated CI/CD by default</li>
+        <li>Self-hosted and cloud options</li>
+        <li>Advanced DevOps lifecycle tools</li>
+        <li>Strong enterprise focus</li>
+    </ul>
+    <h2>Best Practices</h2>
+    <ul>
+        <li>Write clear and meaningful commit messages</li>
+        <li>Keep commits small and focused</li>
+        <li>Use branches for all new work</li>
+        <li>Review code before merging</li>
+        <li>Pull frequently to avoid conflicts</li>
+    </ul>
 
-                <h2>Authentication and Security</h2>
-                <p>Protect your API endpoints with JWT tokens:</p>
-                <div class="code-block">
-                    <pre><code>from flask_jwt_extended import JWTManager, create_access_token, jwt_required
-
-app.config['JWT_SECRET_KEY'] = 'your-secret-key'
-jwt = JWTManager(app)
-
-@app.route('/api/login', methods=['POST'])
-def login():
-    username = request.json.get('username')
-    password = request.json.get('password')
-    # Validate credentials
-    access_token = create_access_token(identity=username)
-    return jsonify(access_token=access_token)
-
-@app.route('/api/protected', methods=['GET'])
-@jwt_required()
-def protected():
-    return jsonify(message="This is protected")</code></pre>
-                </div>
-
-                <h2>Testing Your API</h2>
-                <p>Use pytest to write comprehensive tests:</p>
-                <div class="code-block">
-                    <pre><code>import pytest
-from app import app
-
-@pytest.fixture
-def client():
-    app.config['TESTING'] = True
-    with app.test_client() as client:
-        yield client
-
-def test_get_books(client):
-    response = client.get('/api/books')
-    assert response.status_code == 200
-    assert 'books' in response.json</code></pre>
-                </div>
-
-                <h2>Deployment Tips</h2>
-                <ul>
-                    <li>Use environment variables for sensitive configuration</li>
-                    <li>Enable HTTPS in production</li>
-                    <li>Implement rate limiting to prevent abuse</li>
-                    <li>Use a production-grade server like Gunicorn</li>
-                    <li>Set up logging and monitoring</li>
-                </ul>
-
-                <h2>Conclusion</h2>
-                <p>Flask makes it easy to build powerful RESTful APIs quickly. Start with the basics, follow best practices, and gradually add features like authentication, database integration, and comprehensive testing. Your API will be production-ready in no time!</p>
+    <h2>Conclusion</h2>
+    <p>
+        Git is the foundation of modern software development, while GitHub and GitLab extend Git with powerful collaboration and DevOps features. Understanding Git workflows and choosing the right platform helps teams deliver reliable, scalable, and well-managed software efficiently.
+    </p>
+</div>
 
                 <div class="post-tags">
-                    <span class="tag">Flask</span>
+                    <span class="tag">git-github</span>
                     <span class="tag">Python</span>
-                    <span class="tag">REST API</span>
-                    <span class="tag">Web Development</span>
+                    <span class="tag">Version Control</span>
+                    <span class="tag">GitLab</span>
                 </div>
             </div>
 

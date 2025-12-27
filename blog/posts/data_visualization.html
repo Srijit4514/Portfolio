@@ -15,7 +15,7 @@
 
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="logo" onclick="window.location.href='../../index.html'" onkeydown="if(event.key === 'Enter'){ window.location.href='../../index.html'; }" role="button" title="Go to homepage" tabindex="0"><strong>SR</strong></div>
+        <div class="logo" onclick="window.location.href='data_visualization.html'" onkeydown="if(event.key === 'Enter'){ window.location.href='../../index.html'; }" role="button" title="Go to homepage" tabindex="0"><strong>SR</strong></div>
         <div class="nav-links">
             <ul>
                 <li><a href="../../index.html#home">Home</a></li>
@@ -41,16 +41,16 @@
                 <span class="separator">/</span>
                 <a href="../data-science.html">Data Science</a>
                 <span class="separator">/</span>
-                <span>Getting Started with Data Visualization</span>
+                <span>Started with Data Visualization</span>
             </div>
 
             <!-- Article Header -->
             <header class="post-header">
-                <h1 class="post-title">Getting Started with Data Visualization</h1>
+                <h1 class="post-title">Data Visualization on Monte Carlo Simulation</h1>
                 <div class="post-meta">
                     <span class="post-date">
                         <i class="far fa-calendar"></i>
-                        December 28, 2024
+                        October 09, 2024
                     </span>
                     <span class="post-read-time">
                         <i class="far fa-clock"></i>
@@ -63,99 +63,142 @@
                 </div>
             </header>
 
-            <!-- Article Body -->
-            <div class="post-content">
-                <p class="lead">Data visualization is how you turn raw numbers into insight. Clear visuals make it easier for teams, clients, and stakeholders to spot patterns, act quickly, and remember the story your data tells.</p>
+           <!-- Article Body -->
+<div class="post-content">
+    <p class="lead">
+        While working on Monte Carlo simulation, I decided to explore one of the most classic and intuitive examples: estimating the value of Pi (π). This experiment helped me understand how randomness, when used correctly, can approximate precise mathematical constants.
+    </p>
 
-                <h2>What is Data Visualization?</h2>
-                <p>It is the practice of mapping data to visual encodings—position, color, size, and shape—so people can understand trends, comparisons, and outliers faster than by reading tables alone.</p>
+    <h2>Introduction to Pi (π)</h2>
+    <p>
+        Pi is one of the most fascinating constants in mathematics. It represents the ratio of a circle’s circumference to its diameter. Its value is approximately 3.14159, but its digits continue infinitely without repeating. In this work, I used the Monte Carlo simulation algorithm to estimate the value of π using random sampling.
+    </p>
 
-                <h3>Pick the Right Chart</h3>
-                <ul>
-                    <li><strong>Line:</strong> Trends over time or ordered sequences.</li>
-                    <li><strong>Bar:</strong> Compare categories or rank items side-by-side.</li>
-                    <li><strong>Scatter:</strong> Relationship between two numeric variables; great for spotting clusters and outliers.</li>
-                    <li><strong>Stacked/Area:</strong> Show parts of a whole over time, but beware of clutter.</li>
-                    <li><strong>Maps:</strong> Geographic patterns; use sparingly and only when location matters.</li>
-                </ul>
+    <h2>What is Monte Carlo Simulation?</h2>
+    <p>
+        The Monte Carlo method is a statistical technique used to solve problems through random sampling. It is widely applied in finance, engineering, physics, and data science because of its simplicity and effectiveness. The core idea is to use randomness to approximate solutions to problems that are deterministic in nature.
+    </p>
 
-                <h2>Design Principles that Matter</h2>
-                <ol>
-                    <li><strong>Clarity first:</strong> Remove chart junk—heavy borders, shadows, and unnecessary gradients.</li>
-                    <li><strong>Color with purpose:</strong> Use a restrained palette; reserve accent colors for the key series.</li>
-                    <li><strong>Consistent scales:</strong> Start axes at zero for bars; label units; avoid mixing scale types without clear cues.</li>
-                    <li><strong>Accessibility:</strong> Use colorblind-friendly palettes and sufficient contrast; never rely on color alone—add labels or patterns.</li>
-                    <li><strong>Context:</strong> Titles, subtitles, and annotations explain the “why” so readers don’t guess.</li>
-                </ol>
+    <h2>Estimating Pi (π) Using Monte Carlo Simulation</h2>
+    <p>
+        To estimate π, imagine a square with side length 2 units and a circle of radius 1 unit perfectly inscribed inside it. The square has an area of 4, while the circle has an area of πr². By randomly sampling points inside the square and checking how many fall within the circle, we can estimate the value of π.
+    </p>
 
-                <h2>Essential Python Stack</h2>
-                <p>These libraries cover quick exploration to polished, interactive visuals:</p>
+    <h3>Geometry Behind the Idea</h3>
+    <ul>
+        <li><strong>Square:</strong> Side length = 2, Area = 2² = 4</li>
+        <li><strong>Circle:</strong> Radius = 1, Area = π × 1² = π</li>
+    </ul>
 
-                <div class="code-block">
-                    <pre><code># Core Python visualization stack
-import pandas as pd
-import matplotlib.pyplot as plt   # Versatile, customizable
-import seaborn as sns             # Beautiful statistical defaults
-import plotly.express as px       # Interactive charts for the web</code></pre>
-                </div>
+    <h3>Random Sampling</h3>
+    <p>
+        I generated random points (x, y) such that −1 ≤ x ≤ 1 and −1 ≤ y ≤ 1. These points are uniformly distributed across the square.
+    </p>
 
-                <h3>Example: From CSV to Insight</h3>
-                <p>Load a dataset, clean it, and produce a labeled chart that highlights the main story.</p>
+    <h3>Determining Point Position</h3>
+    <p>
+        Each point is checked using the equation x² + y² ≤ 1. If the condition is true, the point lies inside the circle.
+    </p>
 
-                <div class="code-block">
-                    <pre><code>import pandas as pd
-import seaborn as sns
+    <h3>Counting and Ratio</h3>
+    <p>
+        Let <strong>N<sub>circle</sub></strong> be the number of points inside the circle and <strong>N<sub>total</sub></strong> be the total number of points. The ratio
+        <code>N<sub>circle</sub> / N<sub>total</sub></code> approximates <code>π / 4</code>.
+    </p>
+
+    <h3>Estimating Pi</h3>
+    <p>
+        By multiplying the ratio by 4, we get the estimate:
+        <br>
+        <strong>π ≈ 4 × (N<sub>circle</sub> / N<sub>total</sub>)</strong>
+    </p>
+
+    <h2>Implementation in Python</h2>
+    <p>
+        I used NumPy for fast random number generation and Matplotlib for visualization.
+    </p>
+
+    <div class="code-block">
+        <pre><code>import numpy as np
 import matplotlib.pyplot as plt
 
-sns.set_theme(style="whitegrid")
+# Number of random points
+num_points = 10000000
 
-# Load data
-sales = pd.read_csv("sales_by_region.csv")
+# Generate random points
+x = np.random.uniform(-1, 1, num_points)
+y = np.random.uniform(-1, 1, num_points)
 
-# Summarize totals
-summary = (
-    sales.groupby("region")["revenue"]
-    .sum()
-    .reset_index()
-    .sort_values("revenue", ascending=False)
-)
+# Points inside the circle
+inside_circle = x**2 + y**2 <= 1
 
-# Plot
-plt.figure(figsize=(8, 5))
-ax = sns.barplot(data=summary, x="revenue", y="region", palette="crest")
-ax.set_title("Revenue by Region (2024)")
-ax.set_xlabel("Revenue (USD)")
-ax.set_ylabel("")
-ax.bar_label(ax.containers[0], fmt="$%.0f")
-plt.tight_layout()
+# Estimate Pi
+pi_estimate = 4 * np.sum(inside_circle) / num_points
+
+print(f"Estimated value of Pi: {pi_estimate}")</code></pre>
+    </div>
+
+    <p>
+        With 10,000,000 random points, the estimated value of π came out to be approximately <strong>3.1417408</strong>, which is very close to the actual value.
+    </p>
+
+    <h2>Visualization of the Simulation</h2>
+    <p>
+        For clear visualization, I randomly sampled 10,000 points from the generated dataset. This makes the inside and outside regions of the circle clearly visible.
+    </p>
+
+    <div class="code-block">
+        <pre><code>import random
+
+sample_size = 10000
+indices = np.random.choice(num_points, sample_size, replace=False)
+
+sample_x = x[indices]
+sample_y = y[indices]
+sample_inside_circle = inside_circle[indices]
+
+plt.figure(figsize=(6, 6))
+plt.scatter(sample_x[sample_inside_circle], sample_y[sample_inside_circle],
+            color='blue', marker='.', label='Inside Circle')
+plt.scatter(sample_x[~sample_inside_circle], sample_y[~sample_inside_circle],
+            color='red', marker='.', label='Outside Circle')
+
+plt.gca().set_aspect('equal', adjustable='box')
+plt.legend()
+plt.title('Monte Carlo Simulation for Estimating Pi')
+plt.axis(False)
 plt.show()</code></pre>
-                </div>
+    </div>
 
-                <h2>Quick Wins for Beginners</h2>
-                <ul>
-                    <li>Start with one clear question per chart; remove elements that don’t answer it.</li>
-                    <li>Use small multiples instead of overloaded legends when comparing groups.</li>
-                    <li>Annotate the single most important point so the takeaway is explicit.</li>
-                    <li>Test charts in grayscale to ensure they work for everyone.</li>
-                    <li>Prefer tidy data (columns = variables, rows = observations) to simplify plotting.</li>
-                </ul>
+    <h3>Visualization Insight</h3>
+    <ul>
+        <li>Blue points represent samples inside the circle.</li>
+        <li>Red points represent samples outside the circle.</li>
+        <li>The circular boundary becomes more defined as sample size increases.</li>
+    </ul>
 
-                <h2>Next Steps</h2>
-                <ul>
-                    <li>Redo an existing dashboard with cleaner encodings and fewer colors.</li>
-                    <li>Build an interactive Plotly or Altair chart and embed it in a notebook or web page.</li>
-                    <li>Study well-designed examples (FT Visual Vocabulary, Data Viz Project) to expand your chart toolkit.</li>
-                    <li>Add lightweight user testing: ask a colleague to describe the story they see in 10 seconds.</li>
-                </ul>
+    <!-- Photo Area -->
+    <div class="photo-area">
+        <img src="../../imges/monte_carlo.png" alt="Monte Carlo Simulation Visualization" class="work-photo">
+    </div>
 
-                <h2>Conclusion</h2>
-                <p>Good visualization is about intent: choose the right chart, remove distractions, and highlight what matters. With a thoughtful workflow and a few reliable tools, your data will speak clearly.</p>
+    <h2>Accuracy and Convergence</h2>
+    <p>
+        As the number of random points increases, the estimated value of π becomes more accurate. This behavior is explained by the <strong>Law of Large Numbers</strong>, which ensures convergence toward the true value with sufficient samples.
+    </p>
+
+    <h2>Conclusion</h2>
+    <p>
+        This Monte Carlo simulation showed me how powerful randomness can be when applied correctly. Even though π is a deterministic constant, random sampling provides an intuitive and visually appealing way to approximate it. This experiment strengthened my understanding of probabilistic methods and their practical applications in data science.
+    </p>
+</div>
+
 
                 <div class="post-tags">
+                    <span class="tag">Monte Carlo</span>
                     <span class="tag">Data Visualization</span>
                     <span class="tag">Python</span>
-                    <span class="tag">Storytelling</span>
-                    <span class="tag">Best Practices</span>
+                    <span class="tag">Simulation</span>
                 </div>
             </div>
 
