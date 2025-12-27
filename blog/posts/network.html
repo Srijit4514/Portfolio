@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtualization with VMware - Srijit Roy</title>
+    <link rel="icon" href="/favicons/favicon-32x32.png" type="image/png">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo" onclick="window.location.href='network.html'" onkeydown="if(event.key === 'Enter'){ window.location.href='../../index.html'; }" role="button" title="Go to homepage" tabindex="0"><strong>SR</strong></div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="../../index.html#home">Home</a></li>
+                <li><a href="../../index.html#about">About</a></li>
+                <li><a href="../../index.html#skills">Skills</a></li>
+                <li><a href="../../index.html#projects">Projects</a></li>
+                <li><a href="../../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+
+    <!-- Article Content -->
+    <article class="blog-post">
+        <div class="container blog-container">
+            <!-- Breadcrumb -->
+            <div class="breadcrumb">
+                <a href="../../index.html"><i class="fas fa-home"></i> Home</a>
+                <span class="separator">/</span>
+                <a href="../hardware-networking.html">Hardware & Networking</a>
+                <span class="separator">/</span>
+                <span>Let's talk about Networking</span>
+            </div>
+
+            <!-- Article Header -->
+            <header class="post-header">
+                <h1 class="post-title">Let's talk about Networking</h1>
+                <div class="post-meta">
+                    <span class="post-date">
+                        <i class="far fa-calendar"></i>
+                        January 08, 2025
+                    </span>
+                    <span class="post-read-time">
+                        <i class="far fa-clock"></i>
+                        8 min read
+                    </span>
+                    <span class="post-category">
+                        <i class="fas fa-tag"></i>
+                        Hardware & Networking
+                    </span>
+                </div>
+            </header>
+
+            <!-- Article Body -->
+<div class="post-content">
+    <p class="lead">
+        Computer networking is the backbone of modern communication systems. From browsing the web to cloud computing, networking technologies like TCP/IP, routing protocols, and network layers enable devices to communicate reliably and efficiently across the globe.
+    </p>
+
+    <h2>What is Computer Networking?</h2>
+    <p>
+        Computer networking is the practice of connecting multiple devices (computers, servers, routers, switches) to share data, resources, and services. Networks can be small (local networks) or large (the internet), and they rely on standardized protocols to ensure proper communication.
+    </p>
+
+    <h2>TCP/IP Fundamentals</h2>
+
+    <h3>What is TCP/IP?</h3>
+    <p>
+        TCP/IP (Transmission Control Protocol / Internet Protocol) is the core protocol suite of the internet. It defines how data is packetized, addressed, transmitted, routed, and received between devices.
+    </p>
+
+    <h3>Internet Protocol (IP)</h3>
+    <p>
+        IP is responsible for logical addressing and routing of packets. Each device on a network is assigned an IP address, which uniquely identifies it.
+    </p>
+    <ul>
+        <li><strong>IPv4:</strong> 32-bit address (e.g., 192.168.1.1)</li>
+        <li><strong>IPv6:</strong> 128-bit address, designed to replace IPv4</li>
+    </ul>
+
+    <h3>Transmission Control Protocol (TCP)</h3>
+    <p>
+        TCP ensures reliable data transmission by establishing a connection, sequencing packets, handling retransmissions, and providing error control.
+    </p>
+    <ul>
+        <li>Connection-oriented communication</li>
+        <li>Guaranteed delivery and ordering</li>
+        <li>Flow and congestion control</li>
+    </ul>
+
+    <h3>UDP vs TCP</h3>
+    <ul>
+        <li><strong>TCP:</strong> Reliable, slower, used for HTTP, HTTPS, FTP</li>
+        <li><strong>UDP:</strong> Fast, connectionless, used for DNS, streaming, VoIP</li>
+    </ul>
+
+    <h2>Network Layers</h2>
+
+    <h3>OSI Model (7 Layers)</h3>
+    <p>
+        The OSI model provides a conceptual framework for understanding network communication.
+    </p>
+    <ol>
+        <li><strong>Physical:</strong> Cables, signals, hardware</li>
+        <li><strong>Data Link:</strong> MAC addressing, switching</li>
+        <li><strong>Network:</strong> IP addressing and routing</li>
+        <li><strong>Transport:</strong> TCP and UDP</li>
+        <li><strong>Session:</strong> Session management</li>
+        <li><strong>Presentation:</strong> Encryption, compression</li>
+        <li><strong>Application:</strong> HTTP, FTP, SMTP, DNS</li>
+    </ol>
+
+    <h3>TCP/IP Model (4 Layers)</h3>
+    <ul>
+        <li><strong>Network Interface</strong></li>
+        <li><strong>Internet</strong></li>
+        <li><strong>Transport</strong></li>
+        <li><strong>Application</strong></li>
+    </ul>
+
+    <h2>Routers and Wi-Fi Configuration</h2>
+
+    <h3>What is a Router?</h3>
+    <p>
+        A router connects different networks and forwards packets based on IP addresses. Home routers typically combine routing, switching, firewall, and wireless access point functionalities.
+    </p>
+
+    <h3>Basic Router Configuration</h3>
+    <ol>
+        <li>Access router admin panel (e.g., 192.168.1.1)</li>
+        <li>Change default username and password</li>
+        <li>Configure WAN settings (ISP provided)</li>
+        <li>Set LAN IP range and DHCP</li>
+        <li>Enable firewall and NAT</li>
+    </ol>
+
+    <h3>Wi-Fi Configuration Best Practices</h3>
+    <ul>
+        <li>Use WPA3 or WPA2 encryption</li>
+        <li>Change default SSID name</li>
+        <li>Use strong Wi-Fi passwords</li>
+        <li>Select optimal Wi-Fi channel</li>
+        <li>Disable WPS for better security</li>
+    </ul>
+
+    <h2>Routing and Routing Tables</h2>
+
+    <h3>What is a Routing Table?</h3>
+    <p>
+        A routing table is a set of rules that determines where network packets should be forwarded. Routers use routing tables to decide the next hop for each packet.
+    </p>
+
+    <h3>Static Routing</h3>
+    <p>
+        Static routing involves manually configuring routes. It is simple and secure but not scalable.
+    </p>
+    <ul>
+        <li>Low overhead</li>
+        <li>No automatic updates</li>
+        <li>Suitable for small networks</li>
+    </ul>
+
+    <h3>Dynamic Routing</h3>
+    <p>
+        Dynamic routing protocols automatically learn and update routes based on network changes.
+    </p>
+
+    <h4>RIP (Routing Information Protocol)</h4>
+    <ul>
+        <li>Distance-vector protocol</li>
+        <li>Uses hop count as metric</li>
+        <li>Maximum 15 hops</li>
+        <li>Simple but outdated</li>
+    </ul>
+
+    <h4>OSPF (Open Shortest Path First)</h4>
+    <ul>
+        <li>Link-state protocol</li>
+        <li>Uses cost as metric</li>
+        <li>Fast convergence</li>
+        <li>Common in enterprise networks</li>
+    </ul>
+
+    <h4>BGP (Border Gateway Protocol)</h4>
+    <ul>
+        <li>Path-vector protocol</li>
+        <li>Used between autonomous systems</li>
+        <li>Backbone of the internet</li>
+        <li>Highly scalable and policy-based</li>
+    </ul>
+
+    <h2>Common Networking Use Cases</h2>
+    <ul>
+        <li>Home and office networking</li>
+        <li>Enterprise infrastructure</li>
+        <li>Cloud and data center networking</li>
+        <li>Cybersecurity and monitoring</li>
+        <li>Network automation and DevOps</li>
+    </ul>
+
+    <h2>Conclusion</h2>
+    <p>
+        Networking knowledge is essential for IT professionals, developers, and cybersecurity enthusiasts. Understanding TCP/IP, routing protocols, network layers, and router configuration provides a strong foundation for building, securing, and troubleshooting modern networks.
+    </p>
+
+    <p>
+        Start with the basics, practice using network labs or virtual machines, and gradually explore advanced routing and enterprise-grade protocols to deepen your expertise.
+    </p>
+</div>
+
+                <div class="post-tags">
+                    <span class="tag">TCP/IP</span>
+                    <span class="tag">OSI</span>
+                    <span class="tag">Routing</span>
+                    <span class="tag">Networking</span>
+                </div>
+            </div>
+
+            <!-- Post Navigation -->
+            <div class="post-navigation">
+                <a href="../hardware-networking.html" class="btn secondary-btn">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Hardware & Networking
+                </a>
+            </div>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">SR</div>
+                <p>© 2025 Srijit Roy.</p>
+                <div class="footer-social">
+                    <a href="https://github.com/Srijit4514" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/srijit-roy-377077282/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/darks04yt/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/Srijit786" target="_blank"><i class="fab fa-x"></i></a>
+                    <a href="https://discord.com/users/963409962959245362" target="_blank"><i class="fab fa-discord"></i></a>
+                </div>
+                <div class="terminal-quote">
+                    <span>Built with <i class="fas fa-laptop-code"></i> and <i class="fas fa-coffee"></i> by Srijit Roy</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="../../script.js"></script>
+</body>
+</html>

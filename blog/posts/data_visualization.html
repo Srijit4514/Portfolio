@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started with Data Visualization - Srijit Roy</title>
+    <link rel="icon" href="/favicons/favicon-32x32.png" type="image/png">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo" onclick="window.location.href='data_visualization.html'" onkeydown="if(event.key === 'Enter'){ window.location.href='../../index.html'; }" role="button" title="Go to homepage" tabindex="0"><strong>SR</strong></div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="../../index.html#home">Home</a></li>
+                <li><a href="../../index.html#about">About</a></li>
+                <li><a href="../../index.html#skills">Skills</a></li>
+                <li><a href="../../index.html#projects">Projects</a></li>
+                <li><a href="../../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+
+    <!-- Article Content -->
+    <article class="blog-post">
+        <div class="container blog-container">
+            <!-- Breadcrumb -->
+            <div class="breadcrumb">
+                <a href="../../index.html"><i class="fas fa-home"></i> Home</a>
+                <span class="separator">/</span>
+                <a href="../data-science.html">Data Science</a>
+                <span class="separator">/</span>
+                <span>Started with Data Visualization</span>
+            </div>
+
+            <!-- Article Header -->
+            <header class="post-header">
+                <h1 class="post-title">Data Visualization on Monte Carlo Simulation</h1>
+                <div class="post-meta">
+                    <span class="post-date">
+                        <i class="far fa-calendar"></i>
+                        October 09, 2024
+                    </span>
+                    <span class="post-read-time">
+                        <i class="far fa-clock"></i>
+                        8 min read
+                    </span>
+                    <span class="post-category">
+                        <i class="fas fa-tag"></i>
+                        Data Science
+                    </span>
+                </div>
+            </header>
+
+           <!-- Article Body -->
+<div class="post-content">
+    <p class="lead">
+        While working on Monte Carlo simulation, I decided to explore one of the most classic and intuitive examples: estimating the value of Pi (π). This experiment helped me understand how randomness, when used correctly, can approximate precise mathematical constants.
+    </p>
+
+    <h2>Introduction to Pi (π)</h2>
+    <p>
+        Pi is one of the most fascinating constants in mathematics. It represents the ratio of a circle’s circumference to its diameter. Its value is approximately 3.14159, but its digits continue infinitely without repeating. In this work, I used the Monte Carlo simulation algorithm to estimate the value of π using random sampling.
+    </p>
+
+    <h2>What is Monte Carlo Simulation?</h2>
+    <p>
+        The Monte Carlo method is a statistical technique used to solve problems through random sampling. It is widely applied in finance, engineering, physics, and data science because of its simplicity and effectiveness. The core idea is to use randomness to approximate solutions to problems that are deterministic in nature.
+    </p>
+
+    <h2>Estimating Pi (π) Using Monte Carlo Simulation</h2>
+    <p>
+        To estimate π, imagine a square with side length 2 units and a circle of radius 1 unit perfectly inscribed inside it. The square has an area of 4, while the circle has an area of πr². By randomly sampling points inside the square and checking how many fall within the circle, we can estimate the value of π.
+    </p>
+
+    <h3>Geometry Behind the Idea</h3>
+    <ul>
+        <li><strong>Square:</strong> Side length = 2, Area = 2² = 4</li>
+        <li><strong>Circle:</strong> Radius = 1, Area = π × 1² = π</li>
+    </ul>
+
+    <h3>Random Sampling</h3>
+    <p>
+        I generated random points (x, y) such that −1 ≤ x ≤ 1 and −1 ≤ y ≤ 1. These points are uniformly distributed across the square.
+    </p>
+
+    <h3>Determining Point Position</h3>
+    <p>
+        Each point is checked using the equation x² + y² ≤ 1. If the condition is true, the point lies inside the circle.
+    </p>
+
+    <h3>Counting and Ratio</h3>
+    <p>
+        Let <strong>N<sub>circle</sub></strong> be the number of points inside the circle and <strong>N<sub>total</sub></strong> be the total number of points. The ratio
+        <code>N<sub>circle</sub> / N<sub>total</sub></code> approximates <code>π / 4</code>.
+    </p>
+
+    <h3>Estimating Pi</h3>
+    <p>
+        By multiplying the ratio by 4, we get the estimate:
+        <br>
+        <strong>π ≈ 4 × (N<sub>circle</sub> / N<sub>total</sub>)</strong>
+    </p>
+
+    <h2>Implementation in Python</h2>
+    <p>
+        I used NumPy for fast random number generation and Matplotlib for visualization.
+    </p>
+
+    <div class="code-block">
+        <pre><code>import numpy as np
+import matplotlib.pyplot as plt
+
+# Number of random points
+num_points = 10000000
+
+# Generate random points
+x = np.random.uniform(-1, 1, num_points)
+y = np.random.uniform(-1, 1, num_points)
+
+# Points inside the circle
+inside_circle = x**2 + y**2 <= 1
+
+# Estimate Pi
+pi_estimate = 4 * np.sum(inside_circle) / num_points
+
+print(f"Estimated value of Pi: {pi_estimate}")</code></pre>
+    </div>
+
+    <p>
+        With 10,000,000 random points, the estimated value of π came out to be approximately <strong>3.1417408</strong>, which is very close to the actual value.
+    </p>
+
+    <h2>Visualization of the Simulation</h2>
+    <p>
+        For clear visualization, I randomly sampled 10,000 points from the generated dataset. This makes the inside and outside regions of the circle clearly visible.
+    </p>
+
+    <div class="code-block">
+        <pre><code>import random
+
+sample_size = 10000
+indices = np.random.choice(num_points, sample_size, replace=False)
+
+sample_x = x[indices]
+sample_y = y[indices]
+sample_inside_circle = inside_circle[indices]
+
+plt.figure(figsize=(6, 6))
+plt.scatter(sample_x[sample_inside_circle], sample_y[sample_inside_circle],
+            color='blue', marker='.', label='Inside Circle')
+plt.scatter(sample_x[~sample_inside_circle], sample_y[~sample_inside_circle],
+            color='red', marker='.', label='Outside Circle')
+
+plt.gca().set_aspect('equal', adjustable='box')
+plt.legend()
+plt.title('Monte Carlo Simulation for Estimating Pi')
+plt.axis(False)
+plt.show()</code></pre>
+    </div>
+
+    <h3>Visualization Insight</h3>
+    <ul>
+        <li>Blue points represent samples inside the circle.</li>
+        <li>Red points represent samples outside the circle.</li>
+        <li>The circular boundary becomes more defined as sample size increases.</li>
+    </ul>
+
+    <!-- Photo Area -->
+    <div class="photo-area">
+        <img src="../../imges/monte_carlo.png" alt="Monte Carlo Simulation Visualization" class="work-photo">
+    </div>
+
+    <h2>Accuracy and Convergence</h2>
+    <p>
+        As the number of random points increases, the estimated value of π becomes more accurate. This behavior is explained by the <strong>Law of Large Numbers</strong>, which ensures convergence toward the true value with sufficient samples.
+    </p>
+
+    <h2>Conclusion</h2>
+    <p>
+        This Monte Carlo simulation showed me how powerful randomness can be when applied correctly. Even though π is a deterministic constant, random sampling provides an intuitive and visually appealing way to approximate it. This experiment strengthened my understanding of probabilistic methods and their practical applications in data science.
+    </p>
+</div>
+
+
+                <div class="post-tags">
+                    <span class="tag">Monte Carlo</span>
+                    <span class="tag">Data Visualization</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Simulation</span>
+                </div>
+            </div>
+
+            <!-- Post Navigation -->
+            <div class="post-navigation">
+                <a href="../data-science.html" class="btn secondary-btn">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Data Science
+                </a>
+            </div>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">SR</div>
+                <p>© 2025 Srijit Roy.</p>
+                <div class="footer-social">
+                    <a href="https://github.com/Srijit4514" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/srijit-roy-377077282/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/darks04yt/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/Srijit786" target="_blank"><i class="fab fa-x"></i></a>
+                    <a href="https://discord.com/users/963409962959245362" target="_blank"><i class="fab fa-discord"></i></a>
+                </div>
+                <div class="terminal-quote">
+                    <span>Built with <i class="fas fa-laptop-code"></i> and <i class="fas fa-coffee"></i> by Srijit Roy</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="../../script.js"></script>
+</body>
+</html>

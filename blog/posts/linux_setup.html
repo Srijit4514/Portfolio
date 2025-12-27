@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mastering the Linux Terminal - Srijit Roy</title>
+    <link rel="icon" href="/favicons/favicon-32x32.png" type="image/png">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo" onclick="window.location.href='linux_setup.html'" onkeydown="if(event.key === 'Enter'){ window.location.href='../../index.html'; }" role="button" title="Go to homepage" tabindex="0"><strong>SR</strong></div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="../../index.html#home">Home</a></li>
+                <li><a href="../../index.html#about">About</a></li>
+                <li><a href="../../index.html#skills">Skills</a></li>
+                <li><a href="../../index.html#projects">Projects</a></li>
+                <li><a href="../../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+
+    <!-- Article Content -->
+    <article class="blog-post">
+        <div class="container blog-container">
+            <!-- Breadcrumb -->
+            <div class="breadcrumb">
+                <a href="../../index.html"><i class="fas fa-home"></i> Home</a>
+                <span class="separator">/</span>
+                <a href="../linux.html">Linux</a>
+                <span class="separator">/</span>
+                <span>First Linux Setup</span>
+            </div>
+
+            <!-- Article Header -->
+            <header class="post-header">
+                <h1 class="post-title">Setup My First Linux Desktop</h1>
+                <div class="post-meta">
+                    <span class="post-date">
+                        <i class="far fa-calendar"></i>
+                        December 20, 2024
+                    </span>
+                    <span class="post-read-time">
+                        <i class="far fa-clock"></i>
+                        12 min read
+                    </span>
+                    <span class="post-category">
+                        <i class="fas fa-tag"></i>
+                        Linux
+                    </span>
+                </div>
+            </header>
+
+           <!-- Article Body -->
+<div class="post-content">
+    <p class="lead">
+        Customizing my laptop with Linux completely changed how I interact with my system. What started as curiosity on a Windows laptop slowly turned into a full transition to Arch Linux. The journey was not smooth, but every challenge taught me how Linux truly works under the hood.
+    </p>
+
+    <h2>Why I Decided to Leave Windows</h2>
+    <p>
+        Windows worked fine for daily use, but I often felt limited when it came to customization,
+        performance control, and learning how the system actually operates. I wanted an environment
+        where I could control every component—from the boot process to the desktop interface.
+    </p>
+
+    <p>
+        Linux offered exactly that: freedom to customize, transparency in system behavior,
+        and a strong learning curve that pushed me to improve my technical skills.
+    </p>
+
+    <h2>First Step: Installing Ubuntu as a Beginner</h2>
+    <p>
+        As a beginner, jumping directly into advanced Linux distributions did not feel practical.
+        I chose Ubuntu as my first Linux operating system because of its stability, friendly installer,
+        and strong community support.
+    </p>
+
+    <p>
+        Ubuntu made the transition from Windows smooth. Hardware support worked out of the box,
+        software installation was simple using <code>apt</code>, and the graphical desktop felt familiar.
+        This phase helped me understand basic Linux concepts like the file system hierarchy,
+        package management, and terminal usage.
+    </p>
+
+    <h2>Exploring Customization on Ubuntu</h2>
+    <p>
+        Ubuntu introduced me to Linux customization. I experimented with different desktop themes,
+        icons, extensions, and keyboard shortcuts. GNOME extensions showed how flexible Linux
+        desktops can be compared to Windows.
+    </p>
+
+    <p>
+        However, after a while, I wanted deeper control—not just cosmetic changes,
+        but full control over services, packages, and system behavior.
+    </p>
+
+    <h2>Switching to Arch Linux</h2>
+    <p>
+        After only a few days on Ubuntu, curiosity pushed me toward Arch Linux.
+        Arch promised minimalism, full control, and a system built exactly the way I wanted.
+        The catch was that everything had to be done manually.
+    </p>
+
+    <p>
+        Installing Arch Linux was challenging. For nearly three days, I struggled with partitioning,
+        bootloaders, network configuration, and display servers. Errors were common,
+        and reinstallations were part of the process.
+    </p>
+
+    <h2>What Arch Linux Taught Me</h2>
+    <p>
+        Arch Linux forced me to slow down and understand each component of the system.
+        Instead of hiding complexity, it exposed it.
+    </p>
+
+    <ul>
+        <li>Manual disk partitioning and file system setup</li>
+        <li>Understanding systemd services</li>
+        <li>Choosing my own desktop environment or window manager</li>
+        <li>Learning package management with <code>pacman</code></li>
+    </ul>
+
+    <p>
+        Every mistake became a lesson. The Arch Wiki became my primary guide,
+        teaching me how Linux truly boots, runs, and manages resources.
+    </p>
+
+    <h2>Laptop Customization on Arch Linux</h2>
+    <p>
+        Once Arch was installed, customization became limitless. I configured my system
+        specifically for performance, battery efficiency, and development work.
+    </p>
+
+    <p>
+        From choosing lightweight window managers to tuning startup services,
+        Arch allowed me to build a system that felt fast, clean, and personal.
+    </p>
+
+    <ul>
+        <li>Minimal desktop environment</li>
+        <li>Custom keybindings and workflows</li>
+        <li>Optimized boot time and resource usage</li>
+        <li>Manual control over installed packages</li>
+    </ul>
+
+    <h2>Using Kali Linux in a Virtual Machine</h2>
+    <p>
+        While Arch became my daily driver, I still needed a security-focused environment.
+        For that, I used Kali Linux inside a virtual machine on my desktop.
+    </p>
+
+    <p>
+        Running Kali in a virtual machine allowed me to experiment with penetration testing
+        tools without affecting my main system. It also reinforced the importance of isolation
+        and security when working with advanced tools.
+    </p>
+
+    <h2>Why Virtual Machines Matter</h2>
+    <p>
+        Virtual machines provide a safe playground for learning. They allow testing,
+        breaking, and rebuilding systems without risk to the host operating system.
+    </p>
+
+    <ul>
+        <li>Safe environment for experimentation</li>
+        <li>Easy rollback using snapshots</li>
+        <li>Separation of daily work and security testing</li>
+    </ul>
+
+    <h2>Challenges Along the Way</h2>
+    <p>
+        The journey was not easy. Driver issues, configuration errors, and hardware quirks
+        tested my patience. But these challenges built problem-solving skills and confidence.
+    </p>
+
+    <p>
+        Linux does not hide complexity—it teaches you to handle it.
+    </p>
+
+    <h2>What Linux Customization Gave Me</h2>
+    <p>
+        Customizing my laptop with Linux transformed it from a generic machine
+        into a system designed around my workflow.
+    </p>
+
+    <ul>
+        <li>Complete control over the operating system</li>
+        <li>Better performance on the same hardware</li>
+        <li>Deeper understanding of operating systems</li>
+        <li>Confidence in troubleshooting and system design</li>
+    </ul>
+
+    <h2>Conclusion</h2>
+    <p>
+        Turning my Windows laptop into an Arch Linux system was more than an installation—it was a journey.
+        Starting with Ubuntu helped build a foundation, while Arch Linux pushed me to truly understand Linux.
+    </p>
+
+    <p>
+        Combined with Kali Linux in a virtual machine, this setup gave me flexibility,
+        power, and a strong learning environment. Linux customization is not just about appearance;
+        it is about ownership of your system.
+    </p>
+</div>
+
+                <div class="post-tags">
+                    <span class="tag">Linux</span>
+                    <span class="tag">Kali Linux</span>
+                    <span class="tag">Setup</span>
+                    <span class="tag">Virtual Machines</span>
+                </div>
+            </div>
+
+            <!-- Post Navigation -->
+            <div class="post-navigation">
+                <a href="../linux.html" class="btn secondary-btn">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Linux
+                </a>
+            </div>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">SR</div>
+                <p>© 2025 Srijit Roy.</p>
+                <div class="footer-social">
+                    <a href="https://github.com/Srijit4514" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/srijit-roy-377077282/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/darks04yt/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/Srijit786" target="_blank"><i class="fab fa-x"></i></a>
+                    <a href="https://discord.com/users/963409962959245362" target="_blank"><i class="fab fa-discord"></i></a>
+                </div>
+                <div class="terminal-quote">
+                    <span>Built with <i class="fas fa-laptop-code"></i> and <i class="fas fa-coffee"></i> by Srijit Roy</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="../../script.js"></script>
+</body>
+</html>

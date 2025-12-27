@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building RESTful APIs with Flask - Srijit Roy</title>
+    <link rel="icon" href="/favicons/favicon-32x32.png" type="image/png">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo" onclick="window.location.href='dbms.html'" onkeydown="if(event.key === 'Enter'){ window.location.href='../../index.html'; }" role="button" title="Go to homepage" tabindex="0"><strong>SR</strong></div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="../../index.html#home">Home</a></li>
+                <li><a href="../../index.html#about">About</a></li>
+                <li><a href="../../index.html#skills">Skills</a></li>
+                <li><a href="../../index.html#projects">Projects</a></li>
+                <li><a href="../../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+
+    <!-- Article Content -->
+    <article class="blog-post">
+        <div class="container blog-container">
+            <!-- Breadcrumb -->
+            <div class="breadcrumb">
+                <a href="../../index.html"><i class="fas fa-home"></i> Home</a>
+                <span class="separator">/</span>
+                <a href="../technical-skills.html">Technical Skills</a>
+                <span class="separator">/</span>
+                <span>Let's Dive into DBMS</span>
+            </div>
+
+            <!-- Article Header -->
+            <header class="post-header">
+                <h1 class="post-title">Let's Dive into DBMS</h1>
+                <div class="post-meta">
+                    <span class="post-date">
+                        <i class="far fa-calendar"></i>
+                        July 15, 2025
+                    </span>
+                    <span class="post-read-time">
+                        <i class="far fa-clock"></i>
+                        8 min read
+                    </span>
+                    <span class="post-category">
+                        <i class="fas fa-tag"></i>
+                        Technical Skills
+                    </span>
+                </div>
+            </header>
+
+           <!-- Article Body -->
+<div class="post-content">
+    <p class="lead">
+        Database Management Systems (DBMS) are the backbone of modern applications, enabling reliable data storage, retrieval, and security. In this guide, we’ll explore SQL-based DBMS concepts, popular database software like MySQL, PostgreSQL, and SQLite, their use cases, and essential data security practices.
+    </p>
+
+    <h2>What is a DBMS?</h2>
+    <p>
+        A Database Management System (DBMS) is software that allows users and applications to create, manage, and interact with databases efficiently. It handles data organization, querying, concurrency, backups, and access control.
+    </p>
+
+    <h2>Why Use a DBMS?</h2>
+    <ul>
+        <li>Structured and organized data storage</li>
+        <li>Efficient data retrieval using queries</li>
+        <li>Data consistency and integrity</li>
+        <li>Multi-user access and concurrency control</li>
+        <li>Built-in security and backup mechanisms</li>
+    </ul>
+
+    <h2>What is SQL?</h2>
+    <p>
+        SQL (Structured Query Language) is a standard language used to interact with relational databases. It is used to define database structures, manipulate data, and control access.
+    </p>
+
+    <h3>Common SQL Operations</h3>
+    <div class="code-block">
+        <pre><code>-- Create table
+CREATE TABLE users (
+    id INTEGER PRIMARY KEY,
+    name TEXT NOT NULL,
+    email TEXT UNIQUE
+);
+
+-- Insert data
+INSERT INTO users (name, email)
+VALUES ('Alice', 'alice@example.com');
+
+-- Retrieve data
+SELECT * FROM users;
+
+-- Update data
+UPDATE users SET name = 'Alice Smith'
+WHERE id = 1;
+
+-- Delete data
+DELETE FROM users WHERE id = 1;</code></pre>
+    </div>
+
+    <h2>Popular SQL Database Software</h2>
+
+    <h3>MySQL</h3>
+    <p>
+        MySQL is one of the most widely used open-source relational databases, known for its speed and simplicity.
+    </p>
+    <ul>
+        <li>Commonly used in web applications</li>
+        <li>Strong support for PHP and LAMP stack</li>
+        <li>Easy to set up and manage</li>
+        <li>Good performance for read-heavy workloads</li>
+    </ul>
+
+    <h3>PostgreSQL</h3>
+    <p>
+        PostgreSQL is an advanced open-source relational database focused on standards compliance, extensibility, and data integrity.
+    </p>
+    <ul>
+        <li>Supports complex queries and transactions</li>
+        <li>Advanced indexing and full-text search</li>
+        <li>Strong ACID compliance</li>
+        <li>Ideal for data-intensive and enterprise systems</li>
+    </ul>
+
+    <h3>SQLite</h3>
+    <p>
+        SQLite is a lightweight, file-based database engine that requires no separate server process.
+    </p>
+    <ul>
+        <li>Embedded directly into applications</li>
+        <li>Zero configuration</li>
+        <li>Used in mobile apps and small projects</li>
+        <li>Best for low to medium data volume</li>
+    </ul>
+
+    <h2>Database Usage in Applications</h2>
+    <p>
+        Databases are used across almost all types of applications:
+    </p>
+    <ul>
+        <li>Web applications (user data, content management)</li>
+        <li>Mobile apps (local storage with SQLite)</li>
+        <li>Enterprise systems (ERP, CRM)</li>
+        <li>Data analytics and reporting</li>
+        <li>Machine learning pipelines</li>
+    </ul>
+
+    <h2>Data Security in DBMS</h2>
+    <p>
+        Protecting data is a critical responsibility of any DBMS. Most modern databases provide multiple security layers.
+    </p>
+
+    <h3>1. Authentication and Authorization</h3>
+    <ul>
+        <li>User-based access control</li>
+        <li>Role-based permissions</li>
+        <li>Least-privilege principle</li>
+    </ul>
+
+    <h3>2. Encryption</h3>
+    <ul>
+        <li>Encryption at rest (disk-level encryption)</li>
+        <li>Encryption in transit (TLS/SSL connections)</li>
+    </ul>
+
+    <h3>3. Preventing SQL Injection</h3>
+    <div class="code-block">
+        <pre><code># Unsafe (example)
+query = "SELECT * FROM users WHERE email = '" + email + "'"
+
+# Safe using parameterized query
+cursor.execute(
+    "SELECT * FROM users WHERE email = %s",
+    (email,)
+)</code></pre>
+    </div>
+
+    <h3>4. Backups and Recovery</h3>
+    <ul>
+        <li>Regular automated backups</li>
+        <li>Point-in-time recovery</li>
+        <li>Replication for high availability</li>
+    </ul>
+
+    <h2>Best Practices</h2>
+    <ul>
+        <li>Choose the right DBMS for your workload</li>
+        <li>Index frequently queried columns</li>
+        <li>Use transactions for critical operations</li>
+        <li>Never expose database credentials</li>
+        <li>Monitor performance and security logs</li>
+    </ul>
+
+    <h2>Conclusion</h2>
+    <p>
+        SQL-based DBMS solutions like MySQL, PostgreSQL, and SQLite power most modern applications. Understanding their differences, proper usage, and security practices helps you design reliable, scalable, and secure data-driven systems.
+    </p>
+</div>
+
+                <div class="post-tags">
+                    <span class="tag">DBMS</span>
+                    <span class="tag">SQL</span>
+                    <span class="tag">Database Security</span>
+                    <span class="tag">Python</span>
+                </div>
+            </div>
+
+            <!-- Post Navigation -->
+            <div class="post-navigation">
+                <a href="../technical-skills.html" class="btn secondary-btn">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Technical Skills
+                </a>
+            </div>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">SR</div>
+                <p>© 2025 Srijit Roy.</p>
+                <div class="footer-social">
+                    <a href="https://github.com/Srijit4514" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/srijit-roy-377077282/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/darks04yt/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/Srijit786" target="_blank"><i class="fab fa-x"></i></a>
+                    <a href="https://discord.com/users/963409962959245362" target="_blank"><i class="fab fa-discord"></i></a>
+                </div>
+                <div class="terminal-quote">
+                    <span>Built with <i class="fas fa-laptop-code"></i> and <i class="fas fa-coffee"></i> by Srijit Roy</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="../../script.js"></script>
+</body>
+</html>

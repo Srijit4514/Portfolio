@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building RESTful APIs with Flask - Srijit Roy</title>
+    <link rel="icon" href="/favicons/favicon-32x32.png" type="image/png">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo" onclick="window.location.href='git_github.html'" onkeydown="if(event.key === 'Enter'){ window.location.href='../../index.html'; }" role="button" title="Go to homepage" tabindex="0"><strong>SR</strong></div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="../../index.html#home">Home</a></li>
+                <li><a href="../../index.html#about">About</a></li>
+                <li><a href="../../index.html#skills">Skills</a></li>
+                <li><a href="../../index.html#projects">Projects</a></li>
+                <li><a href="../../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+
+    <!-- Article Content -->
+    <article class="blog-post">
+        <div class="container blog-container">
+            <!-- Breadcrumb -->
+            <div class="breadcrumb">
+                <a href="../../index.html"><i class="fas fa-home"></i> Home</a>
+                <span class="separator">/</span>
+                <a href="../technical-skills.html">Technical Skills</a>
+                <span class="separator">/</span>
+                <span>Git & GitHub Experience</span>
+            </div>
+
+            <!-- Article Header -->
+            <header class="post-header">
+                <h1 class="post-title">Git & GitHub Experience</h1>
+                <div class="post-meta">
+                    <span class="post-date">
+                        <i class="far fa-calendar"></i>
+                        December 15, 2024
+                    </span>
+                    <span class="post-read-time">
+                        <i class="far fa-clock"></i>
+                        7 min read
+                    </span>
+                    <span class="post-category">
+                        <i class="fas fa-tag"></i>
+                        Technical Skills
+                    </span>
+                </div>
+            </header>
+
+            <!-- Article Body -->
+<div class="post-content">
+    <p class="lead">
+        Git is a distributed version control system that helps developers track changes, collaborate efficiently, and manage code history. In this guide, we’ll cover Git fundamentals, common commands, team workflows, GitHub and GitLab platforms.
+    </p>
+
+    <h2>What is Git?</h2>
+    <p>
+        Git is an open-source distributed version control system created by Linus Torvalds. It allows developers to track changes in source code, revert to previous versions, and collaborate without overwriting each other’s work.
+    </p>
+
+    <h2>Why Use Git?</h2>
+    <ul>
+        <li>Tracks complete history of code changes</li>
+        <li>Supports parallel development with branches</li>
+        <li>Works offline with full repository access</li>
+        <li>Fast and scalable for large projects</li>
+        <li>Industry standard for software development</li>
+    </ul>
+
+    <h2>Basic Git Workflow</h2>
+    <p>The standard Git workflow follows these stages:</p>
+    <ol>
+        <li><strong>Working Directory</strong> – Modify files locally</li>
+        <li><strong>Staging Area</strong> – Select changes to commit</li>
+        <li><strong>Repository</strong> – Save changes permanently with commits</li>
+    </ol>
+
+    <h2>Essential Git Commands</h2>
+    <div class="code-block">
+        <pre><code># Configure Git
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+
+# Initialize repository
+git init
+
+# Check status
+git status
+
+# Add files to staging
+git add file.txt
+git add .
+
+# Commit changes
+git commit -m "Initial commit"
+
+# View history
+git log
+
+# Create a new branch
+git branch feature-login
+
+# Switch branch
+git checkout feature-login
+git switch main
+
+# Merge branch
+git merge feature-login</code></pre>
+    </div>
+
+    <h2>Branching Strategy</h2>
+    <p>
+        Branching allows developers to work on features independently. A common strategy includes:
+    </p>
+    <ul>
+        <li><strong>main / master</strong> – Stable production code</li>
+        <li><strong>develop</strong> – Integration branch</li>
+        <li><strong>feature</strong> – New features</li>
+        <li><strong>bugfix</strong> – Fixing issues</li>
+        <li><strong>release</strong> – Preparing releases</li>
+    </ul>
+
+    <h2>Git Workflow for Teams</h2>
+    <p>
+        In team environments, Git enables structured collaboration using remote repositories.
+    </p>
+
+    <h3>Typical Team Workflow</h3>
+    <ol>
+        <li>Clone the remote repository</li>
+        <li>Create a feature branch</li>
+        <li>Make changes and commit locally</li>
+        <li>Push branch to remote</li>
+        <li>Create a Pull Request / Merge Request</li>
+        <li>Code review and merge</li>
+    </ol>
+
+    <div class="code-block">
+        <pre><code># Clone repository
+git clone https://github.com/user/project.git
+
+# Create and switch branch
+git checkout -b feature-auth
+
+# Push branch to remote
+git push origin feature-auth
+
+# Pull latest changes
+git pull origin main</code></pre>
+    </div>
+
+    <h2>What is GitHub?</h2>
+    <p>
+        GitHub is a cloud-based hosting platform for Git repositories. It adds collaboration features like pull requests, issues, actions (CI/CD), and project management tools.
+    </p>
+    <ul>
+        <li>Pull Requests for code review</li>
+        <li>GitHub Actions for CI/CD</li>
+        <li>Issues and Discussions</li>
+        <li>Large open-source community</li>
+    </ul>
+
+    <h2>What is GitLab?</h2>
+    <p>
+        GitLab is a complete DevOps platform that provides Git repository hosting along with built-in CI/CD, security scanning, and deployment tools.
+    </p>
+    <ul>
+        <li>Integrated CI/CD by default</li>
+        <li>Self-hosted and cloud options</li>
+        <li>Advanced DevOps lifecycle tools</li>
+        <li>Strong enterprise focus</li>
+    </ul>
+    <h2>Best Practices</h2>
+    <ul>
+        <li>Write clear and meaningful commit messages</li>
+        <li>Keep commits small and focused</li>
+        <li>Use branches for all new work</li>
+        <li>Review code before merging</li>
+        <li>Pull frequently to avoid conflicts</li>
+    </ul>
+
+    <h2>Conclusion</h2>
+    <p>
+        Git is the foundation of modern software development, while GitHub and GitLab extend Git with powerful collaboration and DevOps features. Understanding Git workflows and choosing the right platform helps teams deliver reliable, scalable, and well-managed software efficiently.
+    </p>
+</div>
+
+                <div class="post-tags">
+                    <span class="tag">git-github</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Version Control</span>
+                    <span class="tag">GitLab</span>
+                </div>
+            </div>
+
+            <!-- Post Navigation -->
+            <div class="post-navigation">
+                <a href="../technical-skills.html" class="btn secondary-btn">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Technical Skills
+                </a>
+            </div>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">SR</div>
+                <p>© 2025 Srijit Roy.</p>
+                <div class="footer-social">
+                    <a href="https://github.com/Srijit4514" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/srijit-roy-377077282/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/darks04yt/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/Srijit786" target="_blank"><i class="fab fa-x"></i></a>
+                    <a href="https://discord.com/users/963409962959245362" target="_blank"><i class="fab fa-discord"></i></a>
+                </div>
+                <div class="terminal-quote">
+                    <span>Built with <i class="fas fa-laptop-code"></i> and <i class="fas fa-coffee"></i> by Srijit Roy</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="../../script.js"></script>
+</body>
+</html>

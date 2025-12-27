@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started with Data Visualization - Srijit Roy</title>
+    <link rel="icon" href="/favicons/favicon-32x32.png" type="image/png">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo" onclick="window.location.href='python_with_libraries.html'" onkeydown="if(event.key === 'Enter'){ window.location.href='../../index.html'; }" role="button" title="Go to homepage" tabindex="0"><strong>SR</strong></div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="../../index.html#home">Home</a></li>
+                <li><a href="../../index.html#about">About</a></li>
+                <li><a href="../../index.html#skills">Skills</a></li>
+                <li><a href="../../index.html#projects">Projects</a></li>
+                <li><a href="../../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+
+    <!-- Article Content -->
+    <article class="blog-post">
+        <div class="container blog-container">
+            <!-- Breadcrumb -->
+            <div class="breadcrumb">
+                <a href="../../index.html"><i class="fas fa-home"></i> Home</a>
+                <span class="separator">/</span>
+                <a href="../data-science.html">Data Science</a>
+                <span class="separator">/</span>
+                <span>Getting Started with Python Libraries</span>
+            </div>
+
+            <!-- Article Header -->
+            <header class="post-header">
+                <h1 class="post-title">Python Libraries for Data Science</h1>
+                <div class="post-meta">
+                    <span class="post-date">
+                        <i class="far fa-calendar"></i>
+                        September 8, 2025
+                    </span>
+                    <span class="post-read-time">
+                        <i class="far fa-clock"></i>
+                        5 min read
+                    </span>
+                    <span class="post-category">
+                        <i class="fas fa-tag"></i>
+                        Data Science
+                    </span>
+                </div>
+            </header>
+
+           <!-- Article Body -->
+<div class="post-content">
+    <p class="lead">
+        As a data science student, Python has become my primary tool for working with data. Over time, I have learned that Python itself is powerful, but its real strength comes from its ecosystem of libraries. In this article, I want to share my personal experience using core Python libraries for data science—NumPy, Pandas, Matplotlib, psycopg2 for database connectivity—and how Power BI complements Python for professional data visualization.
+    </p>
+
+    <h2>Why Python for Data Science?</h2>
+    <p>
+        Python is simple, readable, and extremely flexible. What makes it ideal for data science is the availability of mature, well-documented libraries that cover the entire data workflow: data collection, cleaning, analysis, visualization, and integration with databases and BI tools.
+    </p>
+
+    <h2>NumPy: The Foundation of Numerical Computing</h2>
+    <p>
+        NumPy was the first library that made me realize how efficient Python can be for numerical operations. It provides fast, memory-efficient arrays and mathematical functions that are far more powerful than native Python lists.
+    </p>
+    <ul>
+        <li>Efficient handling of large numerical datasets</li>
+        <li>Vectorized operations that improve performance</li>
+        <li>Foundation for many other libraries like Pandas and SciPy</li>
+    </ul>
+
+    <div class="code-block">
+        <pre><code>import numpy as np
+
+data = np.array([10, 20, 30, 40, 50])
+mean_value = np.mean(data)
+print(mean_value)</code></pre>
+    </div>
+
+    <h2>Pandas: Working with Real-World Data</h2>
+    <p>
+        Pandas is the library I use the most. Real-world data is messy, and Pandas makes it manageable. With DataFrames and Series, I can clean, filter, aggregate, and transform data efficiently.
+    </p>
+    <ul>
+        <li>Reading data from CSV, Excel, JSON, and databases</li>
+        <li>Handling missing values and duplicates</li>
+        <li>Grouping and aggregating data for analysis</li>
+    </ul>
+
+    <div class="code-block">
+        <pre><code>import pandas as pd
+
+df = pd.read_csv("sales_data.csv")
+total_sales = df.groupby("region")["revenue"].sum()
+print(total_sales)</code></pre>
+    </div>
+
+    <h2>Matplotlib: Visualizing Data for Insight</h2>
+    <p>
+        Once the data is cleaned and analyzed, visualization becomes essential. Matplotlib allows me to quickly turn numbers into meaningful visuals. Even simple plots often reveal patterns that are not obvious in tables.
+    </p>
+    <ul>
+        <li>Line plots for trends</li>
+        <li>Bar charts for comparisons</li>
+        <li>Scatter plots for relationships</li>
+    </ul>
+
+    <div class="code-block">
+        <pre><code>import matplotlib.pyplot as plt
+
+plt.plot(df["month"], df["revenue"])
+plt.title("Monthly Revenue Trend")
+plt.xlabel("Month")
+plt.ylabel("Revenue")
+plt.show()</code></pre>
+    </div>
+
+    <h2>psycopg2: Connecting Python with Databases</h2>
+    <p>
+        Data rarely lives only in CSV files. In many projects, I worked with PostgreSQL databases. The <strong>psycopg2</strong> library allows Python to connect directly to a PostgreSQL database, making it easy to fetch, insert, and update data programmatically.
+    </p>
+
+    <ul>
+        <li>Secure and reliable PostgreSQL connectivity</li>
+        <li>Execute SQL queries directly from Python</li>
+        <li>Integrates well with Pandas for analysis</li>
+    </ul>
+
+    <div class="code-block">
+        <pre><code>import psycopg2
+import pandas as pd
+
+conn = psycopg2.connect(
+    host="localhost",
+    database="company_db",
+    user="username",
+    password="password"
+)
+
+query = "SELECT * FROM employees"
+df = pd.read_sql(query, conn)
+conn.close()</code></pre>
+    </div>
+
+    <h2>Power BI: From Analysis to Business Insights</h2>
+    <p>
+        While Python is excellent for analysis, Power BI shines when it comes to interactive dashboards and business reporting. I use Power BI to present insights in a way that non-technical stakeholders can easily understand.
+    </p>
+
+    <ul>
+        <li>Interactive dashboards and reports</li>
+        <li>Easy integration with databases and CSV files</li>
+        <li>Strong data modeling and DAX capabilities</li>
+    </ul>
+
+    <p>
+        Power BI complements Python well. I often clean and prepare data using Pandas, export the processed data, and then build dashboards in Power BI for storytelling and decision-making.
+    </p>
+
+    <h2>How These Tools Work Together</h2>
+    <ol>
+        <li>Collect data from files or databases using Pandas and psycopg2</li>
+        <li>Perform numerical analysis with NumPy</li>
+        <li>Explore patterns visually using Matplotlib</li>
+        <li>Build professional dashboards in Power BI</li>
+    </ol>
+
+    <h2>Conclusion</h2>
+    <p>
+        Python and its data science libraries form a complete and flexible ecosystem for working with data. NumPy and Pandas handle the heavy lifting, Matplotlib turns analysis into insight, psycopg2 bridges Python with databases, and Power BI transforms results into impactful visual stories. Together, these tools have shaped how I approach data-driven problem solving.
+    </p>
+</div>
+
+                <div class="post-tags">
+                    <span class="tag">Data Science</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Storytelling</span>
+                    <span class="tag">Libraries</span>
+                </div>
+            </div>
+
+            <!-- Post Navigation -->
+            <div class="post-navigation">
+                <a href="../data-science.html" class="btn secondary-btn">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Data Science
+                </a>
+            </div>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">SR</div>
+                <p>© 2025 Srijit Roy.</p>
+                <div class="footer-social">
+                    <a href="https://github.com/Srijit4514" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/srijit-roy-377077282/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/darks04yt/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/Srijit786" target="_blank"><i class="fab fa-x"></i></a>
+                    <a href="https://discord.com/users/963409962959245362" target="_blank"><i class="fab fa-discord"></i></a>
+                </div>
+                <div class="terminal-quote">
+                    <span>Built with <i class="fas fa-laptop-code"></i> and <i class="fas fa-coffee"></i> by Srijit Roy</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="../../script.js"></script>
+</body>
+</html>
